@@ -9,5 +9,7 @@
     color: white;
     font-size: 32px;
     margin-left: 250px;
+    display: flex;
+    justify-content: space-around;
 }
 
