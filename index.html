@@ -1,15 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="/style.css" />
     <title>Meals and Tails</title>
-</head>
-<body>
-    <h1> Meals & Tails</h1>
+  </head>
+  <body>
+    <h1>Meals & Tails</h1>
+
+    <div class="container is-fluid">
+      <div class="notification is-primary" id="food-jumbotron">
+        FOOD OPTIONS
+        <!-- ---------PROTEIN---------- -->
+        <div class="card" id="protein-card">
+          <div class="card-content" id="protein-card">
+            <div class="content">PROTEIN</div>
+          </div>
+          <!-- ------CheckBoxes---- -->
+          <label class="checkbox">
+            <input type="checkbox">
+            Remember me
+          </label>
+        </div>
+        <!-- ---------VEGETABLES-------- -->
+        <!-- <div class="card">
+            <div class="card-content">
+              <div class="content">
+                VEGETABLES
+              </div>
+            </div>
+          </div>
+      </div> -->
+    </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
