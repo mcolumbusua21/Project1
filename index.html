@@ -65,39 +65,44 @@
         <div class="notification is-primary" id="food-jumbotron">
           FOOD OPTIONS
           <!-- ------------------------PROTEIN------------------- -->
+
+          <!-- TEST BUTTON ONLY created to see if checkboxes are checked or not-->
+          <input type="button" id="btn" value="CLICK HERE">
+          <!--------------------- END OF TEST------------- -->
+
           <div class="card" id="protein-card">
-            <div class="card-content" id="protein-card">
+            <div class="card-content" id="protein-card-content">
               <div class="content">PROTEIN</div>
             </div>
             
             <!-- BEEF -->
-            <label class="checkbox">
-              <input type="checkbox" value="beef">
+            <label class="checkbox-beef">
+              <input type="checkbox" name="proteinCheck" data-food="beef" value="beef">
               Beef
             </label>
             <!-- Chicken -->
-            <label class="checkbox">
-              <input type="checkbox" value="chicken">
+            <label class="checkbox-chicken">
+              <input type="checkbox" name="proteinCheck" value="chicken">
               Chicken
             </label>
             <!-- Fish -->
             <label class="checkbox">
-              <input type="checkbox" value="fish">
+              <input type="checkbox" name="proteinCheck" value="fish">
               Fish
             </label>
             <!-- Tofu -->
             <label class="checkbox">
-              <input type="checkbox" value="tofu">
+              <input type="checkbox" name="proteinCheck" value="tofu">
               Tofu
             </label>
             <!-- Eggs -->
             <label class="checkbox">
-              <input type="checkbox" value="eggs">
+              <input type="checkbox" name="proteinCheck" value="eggs">
               Eggs
             </label>
             <!-- Plant-Based -->
             <label class="checkbox">
-              <input type="checkbox" value="plant-based">
+              <input type="checkbox" name="proteinCheck" value="plant-based">
               Plant Based
             </label>
           </div>
@@ -322,6 +327,7 @@
             </div>
           </div>
         </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="script.js"></script>
 </body>
 </html>
