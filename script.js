@@ -1,39 +1,37 @@
-// possible way to get checkbox values
-// $("#protein-card").find("div:nth-child(2)")
 
-
+// ----------------FOOD PREFERENCE LOGIC------------------
+let userFoodPreference = [];
 
 // collecting PROTEIN checkbox values
 function getProteinsPreference(name) {
     var $proteinsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
-    let proteinsPreference = [];
     $proteinsCheckBoxes.forEach((checkbox) => {
-        proteinsPreference.push(checkbox.value);
+        userFoodPreference.push(checkbox.value);
     });
-    return proteinsPreference;
+    return userFoodPreference
 };
+
 
 // collecting VEGETABLE checkbox values
 function getVegetablesPreference(name) {
     var $vegetableCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
-    let vegetablePreference = [];
     $vegetableCheckBoxes.forEach((checkbox) => {
-        vegetablePreference.push(checkbox.value);
+        userFoodPreference.push(checkbox.value);
     });
-    return vegetablePreference;
+    return userFoodPreference
 };
+
 
 // collecting GRAINS checkbox values
 function getGrainsPreference(name) {
     var $grainsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
-    let grainsPreference = [];
     $grainsCheckBoxes.forEach((checkbox) => {
-        grainsPreference.push(checkbox.value);
+        userFoodPreference.push(checkbox.value);
     });
-    return grainsPreference;
+    return userFoodPreference
 };
 
 
@@ -41,8 +39,30 @@ function getGrainsPreference(name) {
 // THIS WILL NEED TO BE APPLIED TO OUR SEARCH BUTTON
 var $btn = document.querySelector(".is-large")
 $btn.addEventListener("click", (event) => {
-    console.log(getProteinsPreference("proteinsCheck"))
-    console.log(getVegetablesPreference("vegetablesCheck"))
-    console.log(getGrainsPreference("grainsCheck"))
+    userFoodPreference = [];
+    getProteinsPreference("proteinsCheck")
+    getVegetablesPreference("vegetablesCheck")
+    getGrainsPreference("grainsCheck")
+    console.log(userFoodPreference)
+
+    fetchFoodData();
 });
 // *************************************************
+
+
+
+// -----------------FOOD RECIPE API----------------------
+
+
+
+function fetchFoodData(){
+    var apiKey = 9973533;
+    var foodUrl = `https://www.themealdb.com/api/json/v2/${apiKey}/filter.php?i=${userFoodPreference.join()}`;
+    
+
+    fetch(foodUrl)
+        .then((data) => data.json())
+        .then(function (recipes) {
+            console.log(recipes);
+        })
+}
