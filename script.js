@@ -1,37 +1,48 @@
-// POSSIBLE WAYS TO GET DATA
-var $proteinCard = document.querySelector("#protein-card");
-
-$proteinCard.addEventListener("", function(e){
-    preventDefault();
-})
-// console.log($(".checkbox-beef"))
-// console.log($(".checkbox-chicken"))
-
-$("#protein-card").find("div:nth-child(2)")
+// possible way to get checkbox values
+// $("#protein-card").find("div:nth-child(2)")
 
 
 
-var $beefCheckbox = document.querySelector("#beefCheck")
-
-
-
-function getProteinPreference(name) {
-    var $proteinCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
+// collecting PROTEIN checkbox values
+function getProteinsPreference(name) {
+    var $proteinsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
-    let proteinPreference = [];
-    $proteinCheckBoxes.forEach((checkbox) => {
-        proteinPreference.push(checkbox.value);
+    let proteinsPreference = [];
+    $proteinsCheckBoxes.forEach((checkbox) => {
+        proteinsPreference.push(checkbox.value);
     });
-    return proteinPreference;
-}
+    return proteinsPreference;
+};
 
-var $btn = document.querySelector("#btn")
-
-$btn.addEventListener("click", (event) => {
-    alert(getProteinPreference("proteinCheck"))
+// collecting VEGETABLE checkbox values
+function getVegetablesPreference(name) {
+    var $vegetableCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
+    let vegetablePreference = [];
+    $vegetableCheckBoxes.forEach((checkbox) => {
+        vegetablePreference.push(checkbox.value);
+    });
+    return vegetablePreference;
+};
+
+// collecting GRAINS checkbox values
+function getGrainsPreference(name) {
+    var $grainsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
+    
+    let grainsPreference = [];
+    $grainsCheckBoxes.forEach((checkbox) => {
+        grainsPreference.push(checkbox.value);
+    });
+    return grainsPreference;
+};
+
+
+// *************************************************
+// THIS WILL NEED TO BE APPLIED TO OUR SEARCH BUTTON
+var $btn = document.querySelector("#search-btn")
+$btn.addEventListener("click", (event) => {
+    console.log(getProteinsPreference("proteinsCheck"))
+    console.log(getVegetablesPreference("vegetablesCheck"))
+    console.log(getGrainsPreference("grainsCheck"))
 });
-
-
-
-// $("#protein-card").find(`[data-food]="${food-name}"`)
+// *************************************************
