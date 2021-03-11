@@ -4,12 +4,19 @@
     font-size: 20px;
     margin-left: auto
 }
-
 .name {
     color: white;
     font-size: 32px;
     margin-left: 250px;
     display: flex;
     justify-content: space-around;
+}
+
+#food-jumbotron {
+    text-align: center;
+};
+
+#protein-card {
+    width: fit-content;
 }
 

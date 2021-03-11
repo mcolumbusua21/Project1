@@ -1,4 +1,10 @@
-var about = document.querySelector("#about")
-var recipes = document.querySelector("#recipes")
-var contact = document.querySelector("#contact")
-var issues = document.querySelector("#issues")
+const aboutUs = document.querySelector("#about-us")
+const recipes = document.querySelector("#recipes")
+const saveRecipe = document.querySelector("#saved-recipes")
+
+$aboutUs.addEventListener("click", function(e)){
+    console.log("click");
+    
+}
+
+
