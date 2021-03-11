@@ -39,7 +39,7 @@ function getGrainsPreference(name) {
 
 // *************************************************
 // THIS WILL NEED TO BE APPLIED TO OUR SEARCH BUTTON
-var $btn = document.querySelector("#search-btn")
+var $btn = document.querySelector(".is-large")
 $btn.addEventListener("click", (event) => {
     console.log(getProteinsPreference("proteinsCheck"))
     console.log(getVegetablesPreference("vegetablesCheck"))
