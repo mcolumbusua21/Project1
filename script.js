@@ -1,3 +1,13 @@
+const aboutUs = document.querySelector("#about-us")
+const recipes = document.querySelector("#recipes")
+const saveRecipe = document.querySelector("#saved-recipes")
+
+$aboutUs.addEventListener("click", function(e)){
+    console.log("click");
+    
+}
+
+
 // possible way to get checkbox values
 // $("#protein-card").find("div:nth-child(2)")
 
