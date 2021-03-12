@@ -46,25 +46,30 @@ function getGrainsPreference(name) {
 
 // *************************************************
 // THIS WILL NEED TO BE APPLIED TO OUR SEARCH BUTTON
-var $btn = document.querySelector(".is-large")
+var $btn = document.querySelector(".search-button")
+
 $btn.addEventListener("click", (event) => {
+    
     userFoodPreference = [];
     getProteinsPreference("proteinsCheck")
     getVegetablesPreference("vegetablesCheck")
     getGrainsPreference("grainsCheck")
     console.log(userFoodPreference)
 
+     if (userFoodPreference.length >= 4){
+        
+    //   INSERT MODAL HERE TO TELL USER NOT TO CHOOSE MORE THAN 4
+    
+    // WONT RUN THE FUNCTION
+    return
+    };
     // fetch data from foodDB API
     fetchFoodData();
-
-    // var test = userFoodPreference.split("")
-    // console.log(test)
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
-    console.log(userString)
 
     var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
     console.log(foodNetworkUrl)
