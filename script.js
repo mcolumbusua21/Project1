@@ -2,11 +2,12 @@ const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
 
-// aboutUs.addEventListener("click", function(e) {
+
+// aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
-// }
-// )
+// })
+
 
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
@@ -29,7 +30,7 @@ function getVegetablesPreference(name) {
     $vegetableCheckBoxes.forEach((checkbox) => {
         userFoodPreference.push(checkbox.value);
     });
-    return userFoodPreference
+    return userFoodPreferencegit
 };
 
 
@@ -56,15 +57,15 @@ $btn.addEventListener("click", (event) => {
     getGrainsPreference("grainsCheck")
     console.log(userFoodPreference)
 
+    fetchFoodData();
      if (userFoodPreference.length >= 4){
         
-    //   INSERT MODAL HERE TO TELL USER NOT TO CHOOSE MORE THAN 4
-    
-    // WONT RUN THE FUNCTION
+        
     return
     };
     // fetch data from foodDB API
     fetchFoodData();
+    
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
@@ -75,7 +76,6 @@ $btn.addEventListener("click", (event) => {
     console.log(foodNetworkUrl)
 });
 // *************************************************
-
 
 
 // -----------------FOOD RECIPE API----------------------
@@ -94,3 +94,12 @@ function fetchFoodData(){
         })
 }
 
+function messageContainer (){
+    console.log(messageContainer)
+    var btnClick = 
+}
+userLiquorPreference = []
+var userString = userLiquorPreference.toString();
+userString = (userString.replaceAll(",", "-"))
+var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
+    console.log(liquorUrl)
