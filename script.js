@@ -47,8 +47,10 @@ function getGrainsPreference(name) {
 
 // *************************************************
 // THIS WILL NEED TO BE APPLIED TO OUR SEARCH BUTTON
-var $btn = document.querySelector(".is-large")
+var $btn = document.querySelector(".search-button")
+
 $btn.addEventListener("click", (event) => {
+    
     userFoodPreference = [];
     getProteinsPreference("proteinsCheck")
     getVegetablesPreference("vegetablesCheck")
@@ -56,6 +58,22 @@ $btn.addEventListener("click", (event) => {
     console.log(userFoodPreference)
 
     fetchFoodData();
+     if (userFoodPreference.length >= 4){
+        
+        
+    return
+    };
+    // fetch data from foodDB API
+    fetchFoodData();
+    
+
+    // change userFoodPreference into string
+    var userString = userFoodPreference.toString();
+    // replace commas with hyphen
+    userString = (userString.replaceAll(",", "-"))
+
+    var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
+    console.log(foodNetworkUrl)
 });
 // *************************************************
 
@@ -80,3 +98,8 @@ function messageContainer (){
     console.log(messageContainer)
     var btnClick = 
 }
+userLiquorPreference = []
+var userString = userLiquorPreference.toString();
+userString = (userString.replaceAll(",", "-"))
+var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
+    console.log(liquorUrl)
