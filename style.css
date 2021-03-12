@@ -19,39 +19,4 @@
 #protein-card {
     width: fit-content;
 }
-.modal {
-    display: flex;
-    flex-direction: column;
-    padding-top: 50px;
-    width: 300px;
-    height: 50%; 
-    background-color: rgb(0, 0, 0);
-  }
-  .modal-content {
-    position: relative; 
-    background-color: white;
-    padding: 20px; 
-    margin: auto; 
-    width: 75%;  
-    -webkit-animation-name: animatetop;
-    -webkit-animation-duration: 0.4s;
-    animation-name: animatetop;
-    animation-duration: 0.4s
-  }
-  .close-btn {
-    float: right; 
-    color: lightgray; 
-    font-size: 24px;  
-    font-weight: bold;
-  }
-  .close-btn:hover {
-    color: darkgray;
-  }
-  @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
-    to {top:0; opacity:1}
-  }
-  @keyframes animatetop {
-    from {top:-300px; opacity:0}
-    to {top:0; opacity:1}
-  }
+
