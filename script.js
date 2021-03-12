@@ -30,7 +30,7 @@ function getVegetablesPreference(name) {
     $vegetableCheckBoxes.forEach((checkbox) => {
         userFoodPreference.push(checkbox.value);
     });
-    return userFoodPreference
+    return userFoodPreferencegit
 };
 
 
@@ -74,4 +74,9 @@ function fetchFoodData(){
         .then(function (recipes) {
             console.log(recipes);
         })
+}
+
+function messageContainer (){
+    console.log(messageContainer)
+    var btnClick = 
 }
