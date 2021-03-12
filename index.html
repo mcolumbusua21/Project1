@@ -42,18 +42,11 @@
                   <h1>Meals & Tails</h1></div>
               
               <div class="navbar-dropdown">
-                <a class="navbar-item">
-                  About
+                <a href="aboutme.html" class="navbar-item" class="about-us">
+                  About Us
                 </a>
-                <a class="navbar-item">
+                <a class="navbar-item" class="recipes">
                   Saved Recipes
-                </a>
-                <a class="navbar-item">
-                  Contact
-                </a>
-                <hr class="navbar-divider">
-                <a class="navbar-item">
-                  Report an issue
                 </a>
               </div>
             </div>
@@ -61,43 +54,45 @@
           </div>
         </div>
       </nav>
+      
       <div class="container is-fluid">
         <div class="notification is-primary" id="food-jumbotron">
           FOOD OPTIONS
           <!-- ------------------------PROTEIN------------------- -->
-          <div class="card" id="protein-card">
-            <div class="card-content" id="protein-card">
-              <div class="content">PROTEIN</div>
+
+          <div class="card" id="proteins-card">
+            <div class="card-content" id="proteins-card-content">
+              <div class="content">PROTEINS</div>
             </div>
             
             <!-- BEEF -->
-            <label class="checkbox">
-              <input type="checkbox" value="beef">
+            <label class="checkbox-beef">
+              <input type="checkbox" name="proteinsCheck" data-food="beef" value="beef">
               Beef
             </label>
             <!-- Chicken -->
-            <label class="checkbox">
-              <input type="checkbox" value="chicken">
+            <label class="checkbox-chicken">
+              <input type="checkbox" name="proteinsCheck" value="chicken">
               Chicken
             </label>
             <!-- Fish -->
             <label class="checkbox">
-              <input type="checkbox" value="fish">
+              <input type="checkbox" name="proteinsCheck" value="fish">
               Fish
             </label>
             <!-- Tofu -->
             <label class="checkbox">
-              <input type="checkbox" value="tofu">
+              <input type="checkbox" name="proteinsCheck" value="tofu">
               Tofu
             </label>
             <!-- Eggs -->
             <label class="checkbox">
-              <input type="checkbox" value="eggs">
+              <input type="checkbox" name="proteinsCheck" value="eggs">
               Eggs
             </label>
             <!-- Plant-Based -->
             <label class="checkbox">
-              <input type="checkbox" value="plant-based">
+              <input type="checkbox" name="proteinsCheck" value="vegetarian">
               Plant Based
             </label>
           </div>
@@ -110,102 +105,102 @@
                 </div>
                 <!-- Onions -->
                 <label class="checkbox">
-                    <input type="checkbox" value="onion">
+                    <input type="checkbox" name="vegetablesCheck" value="onion">
                     Onions
                   </label>
                 <!-- Bell Pepper -->
                 <label class="checkbox">
-                    <input type="checkbox" value="bell-pepper">
+                    <input type="checkbox" name="vegetablesCheck" value="bell_pepper">
                     Bell Peppers
                   </label>
                 <!-- Potatoes -->
                 <label class="checkbox">
-                    <input type="checkbox" value="potato">
+                    <input type="checkbox" name="vegetablesCheck" value="potatoes">
                     Potatoes
                   </label>
                 <!-- Celere -->
                 <label class="checkbox">
-                    <input type="checkbox" value="celery">
+                    <input type="checkbox" name="vegetablesCheck" value="celery">
                     Celery
                   </label>
                 <!-- Garlic -->
                 <label class="checkbox">
-                    <input type="checkbox" value="garlic">
+                    <input type="checkbox" name="vegetablesCheck" value="garlic">
                     Garlic
                   </label>
                 <!-- Carrot -->
                 <label class="checkbox">
-                    <input type="checkbox" value="carrot">
+                    <input type="checkbox" name="vegetablesCheck" value="carrot">
                     Carrots
                   </label>
                 <!-- Tomato -->
                 <label class="checkbox">
-                    <input type="checkbox" value="tomato">
+                    <input type="checkbox" name="vegetablesCheck" value="tomatoes">
                     Tomatoes
                   </label>
                 <!-- Lettuce -->
                 <label class="checkbox">
-                    <input type="checkbox" value="lettuce">
+                    <input type="checkbox" name="vegetablesCheck" value="lettuce">
                     Lettuce
                   </label>
                 <!-- Broccoli -->
                 <label class="checkbox">
-                    <input type="checkbox" value="broccoli">
+                    <input type="checkbox" name="vegetablesCheck" value="broccoli">
                     Broccoli
                   </label>
                 <!-- Corn -->
                 <label class="checkbox">
-                    <input type="checkbox" value="corn">
+                    <input type="checkbox" name="vegetablesCheck" value="corn">
                     Corn
                   </label>
                 <!-- Spinach -->
                 <label class="checkbox">
-                    <input type="checkbox" value="spinach">
+                    <input type="checkbox" name="vegetablesCheck" value="spinach">
                     Spinach
                   </label>
                 <!-- Mushroom -->
                 <label class="checkbox">
-                    <input type="checkbox" value="mushroom">
+                    <input type="checkbox" name="vegetablesCheck" value="mushroom">
                     Mushrooms
                   </label>
                 <!-- Asparagus -->
                 <label class="checkbox">
-                    <input type="checkbox" value="asparagus">
+                    <input type="checkbox" name="vegetablesCheck" value="asparagus">
                     Asparagus
                   </label>
                 <!-- Squash -->
                 <label class="checkbox">
-                    <input type="checkbox" value="squash">
+                    <input type="checkbox" name="vegetablesCheck" value="squash">
                     Squash
                   </label>
                 <!-- Avocado -->
                 <label class="checkbox">
-                    <input type="checkbox" value="avocado">
+                    <input type="checkbox" name="vegetablesCheck" value="avocado">
                     Avocado
                   </label>
                 <!-- Zucchini -->
                 <label class="checkbox">
-                    <input type="checkbox" value="zucchini">
+                    <input type="checkbox" name="vegetablesCheck" value="zucchini">
                     Zucchini
                   </label>
                 <!-- Cucumber -->
                 <label class="checkbox">
-                    <input type="checkbox" value="cucumber">
+                    <input type="checkbox" name="vegetablesCheck" value="cucumber">
                     Cucumber
                   </label>
                 <!-- Rosemary -->
                 <label class="checkbox">
-                    <input type="checkbox" value="rosemary">
+                    <input type="checkbox" name="vegetablesCheck" value="rosemary">
                     Rosemary
                   </label>
                 <!-- Basil -->
                 <label class="checkbox">
-                    <input type="checkbox" value="basil">
+                    <input type="checkbox" name="vegetablesCheck" value="basil">
                     Basil
                   </label>
                 <!-- Cauliflower -->
                 <label class="checkbox">
-                    <input type="checkbox" value="cauliflower">
+                    <input type="checkbox" name="vegetablesCheck" value="cauliflower">
                     Cauliflower
                   </label>
               </div>
@@ -220,52 +215,52 @@
 
                   <!-- Rice -->
                   <label class="checkbox">
-                    <input type="checkbox" value="rice">
+                    <input type="checkbox" name = "grainsCheck" value="rice">
                     Rice
                   </label>
                   <!-- Pasta -->
                   <label class="checkbox">
-                    <input type="checkbox" value="pasta">
+                    <input type="checkbox" name = "grainsCheck" value="pasta">
                     Pasta
                   </label>
                   <!-- Flour -->
                   <label class="checkbox">
-                    <input type="checkbox" value="flour">
+                    <input type="checkbox" name = "grainsCheck" value="flour">
                     Flour
                   </label>
                   <!-- Bread -->
                   <label class="checkbox">
-                    <input type="checkbox" value="bread">
+                    <input type="checkbox" name = "grainsCheck" value="bread">
                     Bread
                   </label>
                   <!-- Noodles -->
                   <label class="checkbox">
-                    <input type="checkbox" value="noodles">
+                    <input type="checkbox" name = "grainsCheck" value="noodles">
                     Noodles
                   </label>
                   <!-- Ramen -->
                   <label class="checkbox">
-                    <input type="checkbox" value="ramen">
+                    <input type="checkbox" name = "grainsCheck" value="ramen">
                     Ramen
                   </label>
                   <!-- Tortillas -->
                   <label class="checkbox">
-                    <input type="checkbox" value="tortilla">
+                    <input type="checkbox" name = "grainsCheck" value="tortilla">
                     Tortillas
                   </label>
                   <!-- Cereal -->
                   <label class="checkbox">
-                    <input type="checkbox" value="cereal">
+                    <input type="checkbox" name = "grainsCheck" value="cereal">
                     Cereal
                   </label>
                   <!-- Oats -->
                   <label class="checkbox">
-                    <input type="checkbox" value="oats">
+                    <input type="checkbox" name = "grainsCheck" value="oats">
                     Oats
                   </label>
                   <!-- Brown Rice -->
                   <label class="checkbox">
-                    <input type="checkbox" value="brown-rice">
+                    <input type="checkbox" name = "grainsCheck" value="brown_rice">
                     Brown Rice
                   </label>
                 </div>
@@ -324,5 +319,6 @@
           <button> Login Page</button>
           </a>
         <script src="script.js"></script>
+        <script src="aboutme.js"></script>
 </body>
 </html>
