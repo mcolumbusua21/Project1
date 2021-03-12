@@ -2,11 +2,11 @@ const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
 
-$aboutUs.addEventListener("click", function(e)){
-    console.log("click");
+// aboutUs.addEventListener("click", function(e) {
+//     console.log("click");
     
-}
-
+// }
+// )
 
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
@@ -54,7 +54,20 @@ $btn.addEventListener("click", (event) => {
     getGrainsPreference("grainsCheck")
     console.log(userFoodPreference)
 
+    // fetch data from foodDB API
     fetchFoodData();
+
+    // var test = userFoodPreference.split("")
+    // console.log(test)
+
+    // change userFoodPreference into string
+    var userString = userFoodPreference.toString();
+    // replace commas with hyphen
+    userString = (userString.replaceAll(",", "-"))
+    console.log(userString)
+
+    var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
+    console.log(foodNetworkUrl)
 });
 // *************************************************
 
@@ -75,3 +88,4 @@ function fetchFoodData(){
             console.log(recipes);
         })
 }
+
