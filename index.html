@@ -6,42 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
-    />
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
     <link rel="stylesheet" href="/style.css" />
     <title>Meals and Tails</title>
-
-
-
-</head>
-<body>
+  </head>
+  
+  <body>
     <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io">
-            <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
           </a> -->
-      
+          
           <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
           </a>
         </div>
-      
+        
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item">
               Home
             </a>
-      
+            
             <div class="navbar-item has-dropdown is-hoverable">
               <a class="navbar-link">
                 More
               </a>
               <div class="name">
-                  <h1>Meals & Tails</h1></div>
-              
-              <div class="navbar-dropdown">
+                <h1>Meals & Tails</h1></div>
+                
+                <div class="navbar-dropdown">
                 <a href="aboutme.html" class="navbar-item" class="about-us">
                   About Us
                 </a>
@@ -269,12 +266,19 @@
 
         </div>
       </div>
-
+      <article class="message is-small">
+        <div class="message-header">
+          <p>Welcome</p>
+          <button class="delete is-small" aria-label="delete"></button>
+        </div>
+        <div class="message-body">
+         Choose your four favorites items on here and we will pull some recipes for you.
+        </div>
+      </article>
     
     <div class="container is-fluid">
         <div class="notification is-primary">
           <h3>Cocktails</h3>
-          <div class="dropdown is-active">
             <div class="dropdown-trigger">
               <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
                 <span>Dropdown button</span>
@@ -322,6 +326,9 @@
 <button class="button is-normal">Normal</button>
 <button class="button is-medium">Medium</button>
 <button class="button is-large">Large</button>
+</div>
+<!-- <button id="modal-btn"> click me, I make a modal</button> -->
+
         <script src="script.js"></script>
         <script src="aboutme.js"></script>
 </body>

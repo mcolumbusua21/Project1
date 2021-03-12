@@ -1,6 +1,10 @@
 const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
+let modalBtn = document.getElementById("modal-btn")
+let modal = document.querySelector(".modal")
+let closeBtn = document.querySelector(".close-btn")
+
 
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
@@ -59,7 +63,6 @@ $btn.addEventListener("click", (event) => {
 // *************************************************
 
 
-
 // -----------------FOOD RECIPE API----------------------
 
 
@@ -74,4 +77,12 @@ function fetchFoodData(){
         .then(function (recipes) {
             console.log(recipes);
         })
+}
+modalBtn.onclick = function(){
+  closeBtn.onclick = function(){
+  window.onclick = function(e){
+    if(e.target == modal){
+      modal.style.display = "none"
+    }
+  }
 }
