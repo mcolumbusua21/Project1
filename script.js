@@ -12,35 +12,28 @@ const saveRecipe = document.querySelector("#saved-recipes")
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
 
-// collecting PROTEIN checkbox values
-function getProteinsPreference(name) {
-    var $proteinsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
-    
-    $proteinsCheckBoxes.forEach((checkbox) => {
-        userFoodPreference.push(checkbox.value);
-    });
-    return userFoodPreference
-};
+// recipes get pushed here, then chosen from random
+var recipeArray=[];
 
 
-// collecting VEGETABLE checkbox values
-function getVegetablesPreference(name) {
-    var $vegetableCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
-    
-    $vegetableCheckBoxes.forEach((checkbox) => {
-        userFoodPreference.push(checkbox.value);
-    });
-    return userFoodPreferencegit
-};
-
-
-// collecting GRAINS checkbox values
-function getGrainsPreference(name) {
+// collecting FOOD checkbox values
+function getFoodPreference(name, name2, name3) {
     var $grainsCheckBoxes = document.querySelectorAll(`input[name = "${name}"]:checked`)
     
     $grainsCheckBoxes.forEach((checkbox) => {
         userFoodPreference.push(checkbox.value);
     });
+    var $vegetableCheckBoxes = document.querySelectorAll(`input[name = "${name2}"]:checked`)
+    
+    $vegetableCheckBoxes.forEach((checkbox) => {
+        userFoodPreference.push(checkbox.value);
+    });
+    var $proteinsCheckBoxes = document.querySelectorAll(`input[name = "${name3}"]:checked`)
+    
+    $proteinsCheckBoxes.forEach((checkbox) => {
+        userFoodPreference.push(checkbox.value);
+    });
+
     return userFoodPreference
 };
 
@@ -52,20 +45,23 @@ var $btn = document.querySelector(".search-button")
 $btn.addEventListener("click", (event) => {
     
     userFoodPreference = [];
-    getProteinsPreference("proteinsCheck")
-    getVegetablesPreference("vegetablesCheck")
-    getGrainsPreference("grainsCheck")
-    console.log(userFoodPreference)
+    getFoodPreference("grainsCheck", "vegetablesCheck", "proteinsCheck")
 
-    fetchFoodData();
-     if (userFoodPreference.length >= 4){
+     if (userFoodPreference.length > 4){
         
-        
+        //INSERT ALERT HERE 
     return
     };
+    if (userFoodPreference.length == 0){
+
+        // INSERT ALERT HERE
+        return
+    }
+
     // fetch data from foodDB API
     fetchFoodData();
-    
+
+  
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
@@ -74,8 +70,10 @@ $btn.addEventListener("click", (event) => {
 
     var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
     console.log(foodNetworkUrl)
+    console.log(userFoodPreference)
 });
 // *************************************************
+
 
 
 // -----------------FOOD RECIPE API----------------------
@@ -83,20 +81,38 @@ $btn.addEventListener("click", (event) => {
 
 
 function fetchFoodData(){
-    var apiKey = 9973533;
-    var foodUrl = `https://www.themealdb.com/api/json/v2/${apiKey}/filter.php?i=${userFoodPreference.join()}`;
-    
+    // clears array after search
+    recipeArray = [];
 
-    fetch(foodUrl)
+    // gets recipes for each ingredient chosen
+    for (let i = 0; i < userFoodPreference.length; i++) {
+        var apiKey = 9973533;
+        var foodUrl = `https://www.themealdb.com/api/json/v2/${apiKey}/filter.php?i=${userFoodPreference[i]}`;
+        
+        
+        fetch(foodUrl)
         .then((data) => data.json())
-        .then(function (recipes) {
-            console.log(recipes);
+        .then(function (recipes) {    
+            recipeArray.push(recipes.meals)
+              
+            // random recipe
+            //  get random index from recipeArray
+            var randomIndex = recipeArray[Math.floor(Math.random() * recipeArray.length)]
+
+            // get random recipe from random Index
+            var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
+            console.log(randomRecipe)
+
         })
+    }
+
+    // return recipeArray
 }
+
 
 function messageContainer (){
     console.log(messageContainer)
-    var btnClick = 
+    var btnClick; 
 }
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
