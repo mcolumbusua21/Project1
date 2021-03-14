@@ -47,7 +47,7 @@ $btn.addEventListener("click", (event) => {
     userFoodPreference = [];
     getFoodPreference("grainsCheck", "vegetablesCheck", "proteinsCheck")
 
-     if (userFoodPreference.length >= 4){
+     if (userFoodPreference.length > 4){
         
         //INSERT ALERT HERE 
     return
@@ -55,11 +55,16 @@ $btn.addEventListener("click", (event) => {
 
     // fetch data from foodDB API
     fetchFoodData();
-    
-    // random recipe picked
-    console.log(recipeArray)
-    // var randomItem = recipeArray[Math.floor(Math.random() * recipeArray.length)]
 
+    // TRYING TO GET RANDOM RECIPE
+    
+    // random recipe
+    // get random index from recipeArray
+    // var randomIndex = [recipeArray[Math.floor(Math.random() * recipeArray.length)]];
+
+    // get random recipe from random Index
+    // var randomRecipe = [randomIndex[Math.floor(Math.random() * randomIndex.length)]];
+    // console.log(randomRecipe);
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
@@ -78,28 +83,25 @@ $btn.addEventListener("click", (event) => {
 
 
 
-// For loop to get data on each ingredient, put in one array
-// Math.random to pull a recipe.
 function fetchFoodData(){
-    // reset array after every seach
+    // clears array after search
     recipeArray = [];
+
+    // gets recipes for each ingredient chosen
     for (let i = 0; i < userFoodPreference.length; i++) {
         var apiKey = 9973533;
         var foodUrl = `https://www.themealdb.com/api/json/v2/${apiKey}/filter.php?i=${userFoodPreference[i]}`;
-    
-
+        
+        
         fetch(foodUrl)
-            .then((data) => data.json())
-            .then(function (recipes) {
-            var test = JSON.parse(recipes)
-            console.log(test[0].meals)
-            recipeArray.push(recipes)
-            console.log(recipes)
-            console.log(recipeArray)
-            return recipeArray
+        .then((data) => data.json())
+        .then(function (recipes) {    
+            recipeArray.push(recipes.meals)
+            
         })
     }
-    
+    console.log(recipeArray)
+    return recipeArray
 }
 
 
