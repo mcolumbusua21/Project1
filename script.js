@@ -109,11 +109,24 @@ function fetchFoodData(){
     // return recipeArray
 }
 
+var closeModal = document.querySelector("#modal-close-btn")
+var modalContainer = document.querySelector(".modal")
+
+closeModal.addEventListener("click", function(){
+    modalContainer.classList.remove("is-active")
+})
+
 
 function messageContainer (){
     console.log(messageContainer)
     var btnClick; 
 }
+/// save recipes to local storage
+// function saveRecipe(){
+//     console.log(saveRecipe);
+//     var saveRecipe = document.querySelector(".save-button")
+// }
+/// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
 userString = (userString.replaceAll(",", "-"))

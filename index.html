@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
     <link rel="stylesheet" href="/style.css" />
-    <title>Meals and Tails</title>
+    <title>Meals & Tails</title>
   </head>
   
   <body>
@@ -295,21 +295,21 @@
             </div>
           </div>
         </div>
-<button class="button is-small">Small</button>
-<button class="button">Default</button>
-<button class="button is-normal">Normal</button>
-<button class="button is-medium">Medium</button>
-<button class="button is-large">Large</button>
 </div>
-<article class="message-container">
-  <div class="message-header">
-    <p>Welcome to Meals & Tails</p>
-    <button class="delete" aria-label="delete"></button>
+<div class="modal is-active">
+  <div class="modal-background"></div>
+  <div class="modal-content ">
+    <div class="card">
+      <div class="card-content">
+        <div class="content">
+          Welcome to Meals & Tails, where you can search for recipes of your favorite foods. Please choose up to 4 ingredients to make a delicious meal. When you are finished you can pick a spirit to pair with your meal!!
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="message-body">
-    Please choose four of your favorite ingredients. When you have selected we will show you recipes to enjoy. Also we encourage you to enjoy a beverage with your meal.
-  </div>
-</article>
+  <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
+</div>
+<button class="save-button">Saved Recipes</button>
 
         <a href="recipe.html">
           <button> Login Page</button>
