@@ -98,6 +98,12 @@ function messageContainer (){
     console.log(messageContainer)
     var btnClick = 
 }
+
+function saveRecipe(){
+    console.log(saveRecipe);
+    
+}
+
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
 userString = (userString.replaceAll(",", "-"))
