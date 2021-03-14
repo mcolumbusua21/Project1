@@ -2,7 +2,7 @@ const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
 
-
+var $recipeContainer = document.querySelector("#recipe-append");
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
@@ -68,12 +68,12 @@ $btn.addEventListener("click", (event) => {
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
 
-    var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
+    foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
 });
 // *************************************************
-
+var foodNetworkUrl = [];
 
 
 // -----------------FOOD RECIPE API----------------------
@@ -102,11 +102,37 @@ function fetchFoodData(){
             // get random recipe from random Index
             var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
             console.log(randomRecipe)
+            appendRecipe(randomRecipe)
 
         })
     }
 
-    // return recipeArray
+
+};
+
+// -------APPEND RECIPE FUNCTION ----------
+function appendRecipe(recipe) {
+    // clear containers upon each search
+    $recipeContainer.innerHTML = "";
+   
+    // append the Recipe name
+    var recipeName = document.createElement("div");
+    recipeName.textContent = recipe.strMeal;
+    $recipeContainer.append(recipeName);
+
+    // append the recipe image
+    var recipeImage = document.createElement("img");
+    recipeImage.setAttribute("src", recipe.strMealThumb);
+    $recipeContainer.append(recipeImage);
+    
+    // append food network URL
+    // NEED TO CLEAR FOODNETWORK STRING ON EACH SEARCH
+    var recipeUrl = document.createElement("a");
+    recipeUrl.setAttribute("href", foodNetworkUrl)
+    recipeUrl.setAttribute("target", "_blank")
+    recipeUrl.innerText = "Click here for recipes!"
+    $recipeContainer.append(recipeUrl)
+
 }
 
 var closeModal = document.querySelector("#modal-close-btn")
