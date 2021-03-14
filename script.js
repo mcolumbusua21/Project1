@@ -129,6 +129,6 @@ function messageContainer (){
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
-userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
+userString = (userString.replaceAll(""))
+var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
