@@ -144,10 +144,10 @@ closeModal.addEventListener("click", function(){
 
 
 //save recipes to local storage
-function saveRecipe(){
-    console.log(saveRecipe);
+// function saveRecipe(){
+//     console.log(saveRecipe);
     
-}
+// }
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
@@ -155,8 +155,8 @@ userString = (userString.replaceAll(""))
 var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
 
-saveBtn.addEventListener("click", function(event){
-    saveRecipe.
-})
+// saveBtn.addEventListener("click", function(event){
+//     saveRecipe.
+// })
 
-localStorage.setItem("saved-recipes", JSON.stringify(saveRecipes));
+localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
