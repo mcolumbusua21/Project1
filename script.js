@@ -52,12 +52,17 @@ $btn.addEventListener("click", (event) => {
         //INSERT ALERT HERE 
     return
     };
+    if (userFoodPreference.length == 0){
+
+        // INSERT ALERT HERE
+        return
+    }
 
     // fetch data from foodDB API
     fetchFoodData();
 
     // TRYING TO GET RANDOM RECIPE
-    
+
     // random recipe
     // get random index from recipeArray
     // var randomIndex = [recipeArray[Math.floor(Math.random() * recipeArray.length)]];
