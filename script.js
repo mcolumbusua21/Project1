@@ -1,8 +1,8 @@
 const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
-
-var $recipeContainer = document.querySelector("#recipe-append");
+const $recipeContainer = document.querySelector("#recipe-append")
+const saveBtn = document.querySelector(".save-button")
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
@@ -134,7 +134,7 @@ function appendRecipe(recipe) {
     $recipeContainer.append(recipeUrl)
 
 }
-
+//Welcome modal
 var closeModal = document.querySelector("#modal-close-btn")
 var modalContainer = document.querySelector(".modal")
 
@@ -143,18 +143,20 @@ closeModal.addEventListener("click", function(){
 })
 
 
-function messageContainer (){
-    console.log(messageContainer)
-    var btnClick; 
-}
-/// save recipes to local storage
+//save recipes to local storage
 // function saveRecipe(){
 //     console.log(saveRecipe);
-//     var saveRecipe = document.querySelector(".save-button")
+    
 // }
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
-userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
+userString = (userString.replaceAll(""))
+var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
+
+// saveBtn.addEventListener("click", function(event){
+//     saveRecipe.
+// })
+
+localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));

@@ -19,3 +19,12 @@
 #protein-card {
     width: fit-content;
 }
+ .big-body {
+     background-color: darkslategrey;
+ }
+  .about-section{
+     text-align: center;
+  }
+  h2 {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
