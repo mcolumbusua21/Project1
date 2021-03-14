@@ -102,11 +102,22 @@ function fetchFoodData(){
             // get random recipe from random Index
             var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
             console.log(randomRecipe)
+            appendRecipe(randomRecipe)
 
         })
     }
 
-    // return recipeArray
+
+}
+
+var $recipeContainer = document.querySelector("#recipe-append");
+
+function appendRecipe(recipe) {
+    console.log(recipe.strMeal);
+    var recipeName = document.createElement("div");
+    recipeName.textContent = recipe.strMeal;
+    $recipeContainer.append(recipeName);
+    
 }
 
 var closeModal = document.querySelector("#modal-close-btn")
