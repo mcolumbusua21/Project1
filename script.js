@@ -113,10 +113,18 @@ function fetchFoodData(){
 var $recipeContainer = document.querySelector("#recipe-append");
 
 function appendRecipe(recipe) {
+    // clear container upon each search
+    $recipeContainer.innerHTML = "";
     console.log(recipe.strMeal);
+    // append the Recipe name
     var recipeName = document.createElement("div");
     recipeName.textContent = recipe.strMeal;
     $recipeContainer.append(recipeName);
+
+    // append the recipe image
+    var recipeImage = document.createElement("img")
+    recipeImage.setAttribute("src", recipe.strMealThumb)
+    $recipeContainer.append(recipeImage)
     
 }
 
