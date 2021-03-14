@@ -61,15 +61,7 @@ $btn.addEventListener("click", (event) => {
     // fetch data from foodDB API
     fetchFoodData();
 
-    // TRYING TO GET RANDOM RECIPE
-
-    // random recipe
-    // get random index from recipeArray
-    // var randomIndex = [recipeArray[Math.floor(Math.random() * recipeArray.length)]];
-
-    // get random recipe from random Index
-    // var randomRecipe = [randomIndex[Math.floor(Math.random() * randomIndex.length)]];
-    // console.log(randomRecipe);
+  
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
@@ -77,8 +69,8 @@ $btn.addEventListener("click", (event) => {
     userString = (userString.replaceAll(",", "-"))
 
     var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
-    // console.log(foodNetworkUrl)
-    // console.log(userFoodPreference)
+    console.log(foodNetworkUrl)
+    console.log(userFoodPreference)
 });
 // *************************************************
 
@@ -102,11 +94,19 @@ function fetchFoodData(){
         .then((data) => data.json())
         .then(function (recipes) {    
             recipeArray.push(recipes.meals)
-            
+              
+            // random recipe
+            //  get random index from recipeArray
+            var randomIndex = recipeArray[Math.floor(Math.random() * recipeArray.length)]
+
+            // get random recipe from random Index
+            var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
+            console.log(randomRecipe)
+
         })
     }
-    console.log(recipeArray)
-    return recipeArray
+
+    // return recipeArray
 }
 
 
