@@ -7,6 +7,20 @@ const saveBtn = document.querySelector(".save-button")
 //     console.log("click");
     
 // })
+
+//Code for Nav bar on scroll color change
+var navbar = document.querySelector(".navbar")
+window.onload = function() {
+    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ){
+        myNav.classList.add("nav-colored");
+        myNav.classList.remove("nav-transparent");
+    } 
+    else {
+        myNav.classList.add("nav-transparent");
+        myNav.classList.remove("nav-colored");
+    }
+    };
+    
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
 

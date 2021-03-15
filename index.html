@@ -7,39 +7,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
   <link rel="stylesheet" href="/style.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <title>Meals & Tails</title>
 </head>
 
 <body>
   <!--Top navigation bar-->
-  <nav class="navbar" role="navigation" aria-label="main navigation">
+  <nav class="navbar sticky" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <!-- <img src="images/logo.png" width="75px" height="75"class="logo"> -->
       </a>
-  
+
       <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
-  
+
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start center">
         <a class="navbar-item">
           Home
         </a>
-  
+
         <a class="navbar-item">
           About Us
         </a>
-  
+
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
             More
           </a>
-  
+
           <div class="navbar-dropdown">
             <a class="navbar-item">
               Saved Food Receipes
@@ -49,7 +50,7 @@
             </a>
             <hr class="navbar-divider">
             <a class="navbar-item clearlist">
-             Clear List
+              Clear List
             </a>
           </div>
         </div>
@@ -57,17 +58,17 @@
     </div>
   </nav>
   <!--Ends here-->
-<!--Hero Set Up-->
-<section class="hero is-small is-info">
-  <div class="hero-body">
-  <div class="hero-bg"></div>
-  </div>
-</section>
+  <!--Hero Set Up-->
+  <section class="hero is-small is-info">
+    <div class="hero-body">
+      <div class="hero-bg"></div>
+    </div>
+  </section>
   <!--header Banner-->
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1>Meals & Tails</h1>
+        <h1>Mix & Match is our business</h1>
       </div>
     </div>
   </section>
@@ -80,7 +81,7 @@
           <article class="media notification is-info">
             <div class="media-content">
               <div class="content">
-              <!-- ------------------------PROTEIN------------------- -->
+                <!-- ------------------------PROTEIN------------------- -->
                 <h1 class="title is-size-4">Protein</h1>
                 <!-- BEEF -->
                 <label class="checkbox">
@@ -208,53 +209,53 @@
           <article class="media notification is-info">
             <div class="media-content">
               <div class="content">
-              <!-- ------------------------Grains/Gluten------------------- -->
+                <!-- ------------------------Grains/Gluten------------------- -->
                 <h1 class="title is-size-4">Grains/Gluten</h1>
                 <!-- Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="rice">
-          Rice
-        </label>
-        <!-- Flour -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="flour">
-          Flour
-        </label>
-        <!-- Bread -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="bread">
-          Bread
-        </label>
-        <!-- Noodles -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="spaghetti">
-          Noodles
-        </label>
-        <!-- Quinoa -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="quinoa">
-          Quinoa
-        </label>
-        <!-- Ramen -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="ramen">
-          Ramen
-        </label>
-        <!-- Tortillas -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="tortilla">
-          Tortillas
-        </label>
-        <!-- Oats -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="oats">
-          Oats
-        </label>
-        <!-- Brown Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="brown_rice">
-          Brown Rice
-        </label>
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="rice">
+                  Rice
+                </label>
+                <!-- Flour -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="flour">
+                  Flour
+                </label>
+                <!-- Bread -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="bread">
+                  Bread
+                </label>
+                <!-- Noodles -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="spaghetti">
+                  Noodles
+                </label>
+                <!-- Quinoa -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="quinoa">
+                  Quinoa
+                </label>
+                <!-- Ramen -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="ramen">
+                  Ramen
+                </label>
+                <!-- Tortillas -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="tortilla">
+                  Tortillas
+                </label>
+                <!-- Oats -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="oats">
+                  Oats
+                </label>
+                <!-- Brown Rice -->
+                <label class="checkbox">
+                  <input type="checkbox" name="grainsCheck" value="brown_rice">
+                  Brown Rice
+                </label>
 
               </div>
 
@@ -353,6 +354,7 @@
 
   <div id="cocktail-append"></div>
   <!-- END TEST -->
+  <div id="map"></div>
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
@@ -364,6 +366,10 @@
       </div>
     </div>
   </footer>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      async
+    ></script>
   <script src="script.js"></script>
 </body>
 

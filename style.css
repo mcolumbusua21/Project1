@@ -26,3 +26,23 @@
      display: block;
      text-align: left;
  }
+
+ #map {
+     height: 100%;
+ }
+
+ .sticky {
+     position: -webkit-sticky;
+     position: sticky;
+     top: 0;
+ }
+
+ .nav-transparent {
+     background-color: transparent;
+     color: white;
+ }
+
+ .nav-colored {
+     background-color: white;
+     color:#171b22;
+ }
