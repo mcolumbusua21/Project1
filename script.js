@@ -7,8 +7,6 @@ const saveBtn = document.querySelector(".save-button")
 //     console.log("click");
     
 // })
-
-
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
 
@@ -139,13 +137,13 @@ function appendRecipe(recipe) {
 
 }
 //Welcome modal
-var closeModal = document.querySelector("#modal-close-btn")
+var closeModal = document.querySelector("#modal-close-btn1")
 var modalContainer = document.querySelector(".modal")
-var btnX = document.querySelector("modal-close-btn")
+var btnX = document.querySelector("#modal-close-btn1")
 
 closeModal.addEventListener("click", function(){
     modalContainer.classList.remove("is-active")
-    btnX.classList.remove("is-active")
+    btnX.remove();
 
 })
 
