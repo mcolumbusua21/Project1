@@ -8,7 +8,16 @@ const saveBtn = document.querySelector(".save-button")
     
 // })
 
-
+//Code for Nav bar on scroll color change
+var myNav = document.getElementById("mainNav");
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+    myNav.classList.add("scroll");
+  } else {
+    myNav.classList.remove("scroll");
+  }
+};
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
 
@@ -65,6 +74,7 @@ $btn.addEventListener("click", (event) => {
     fetchFoodData();
 
     fetchCocktailData(cocktailMenu.value);
+    userLiquorPreference.push(cocktailMenu.value)
   console.log("COCKTAIL VALUE" + cocktailMenu.value)
 
     // change userFoodPreference into string
@@ -75,10 +85,20 @@ $btn.addEventListener("click", (event) => {
     foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
+
+
+    
+
+   var liquorString = cocktailMenu.value
+   console.log(liquorString)
+
+    var liquorUrl = liquorLink.push(`https://www.liquor.com/search?q=${liquorString}`)
+    console.log(liquorUrl)
 });
 // *************************************************
 var foodNetworkUrl = [];
 
+liquorLink = []
 
 // -----------------FOOD RECIPE API----------------------
 
@@ -120,32 +140,32 @@ function appendRecipe(recipe) {
     $recipeContainer.innerHTML = "";
    
     // append the Recipe name
-    var recipeName = document.createElement("div");
+    var recipeName = document.querySelector(".food-name");
     recipeName.textContent = recipe.strMeal;
-    $recipeContainer.append(recipeName);
+    //$recipeContainer.append(recipeName); //
 
     // append the recipe image
-    var recipeImage = document.createElement("img");
-    recipeImage.setAttribute("src", recipe.strMealThumb);
-    $recipeContainer.append(recipeImage);
+    var recipeImage = document.querySelector("#foodimage");
+    recipeImage.src = recipe.strMealThumb;
+    //$recipeContainer.append(recipeImage);
     
     // append food network URL
     // NEED TO CLEAR FOODNETWORK STRING ON EACH SEARCH
-    var recipeUrl = document.createElement("a");
-    recipeUrl.setAttribute("href", foodNetworkUrl)
+    var recipeUrl = document.querySelector("#foodlink");
+    recipeUrl.href = foodNetworkUrl;
     recipeUrl.setAttribute("target", "_blank")
     recipeUrl.innerText = "Click here for recipes!"
-    $recipeContainer.append(recipeUrl)
+    //$recipeContainer.append(recipeUrl)
 
 }
 //Welcome modal
-var closeModal = document.querySelector("#modal-close-btn")
+var closeModal = document.querySelector("#modal-close-btn1")
 var modalContainer = document.querySelector(".modal")
-var btnX = document.querySelector("modal-close-btn")
+var btnX = document.querySelector("#modal-close-btn1")
 
 closeModal.addEventListener("click", function(){
     modalContainer.classList.remove("is-active")
-    btnX.classList.remove("is-active")
+    btnX.remove();
 
 })
 
@@ -155,7 +175,7 @@ var cocktailbtn = document.querySelector(".dropdown");
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
 }
-cocktailbtn.addEventListener("click", showDrinks)
+// cocktailbtn.addEventListener("click", showDrinks)
 
 /// save recipes to local storage
 //save recipes to local storage
@@ -164,18 +184,14 @@ cocktailbtn.addEventListener("click", showDrinks)
     
 // }
 /// Cocktail link
-userLiquorPreference = []
-var userString = userLiquorPreference.toString();
-// <<<<<<< HEAD
-userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
-    console.log(liquorUrl)
+var userLiquorPreference = []
 
 
-// =======
-userString = (userString.replaceAll(""))
-var liquorUrl = `https://www.liquor.com/${userString}-`
-    console.log(liquorUrl)
+
+
+// userString = (userString.replaceAll(""))
+// var liquorUrl = `https://www.liquor.com/${userString}-`
+//     console.log(liquorUrl)
 
 saveBtn.addEventListener("click", function (){
     console.log("saveBtn");
@@ -218,10 +234,9 @@ function fetchCocktailData(drink) {
         fetch(cocktailUrl)
         .then((data) => data.json())
         .then(function (cocktails) {    
-            console.log(cocktails)
-            console.log(cocktails.drinks)
+            
             cocktailArray.push(cocktails.drinks)
-            console.log(cocktailArray)
+            
 
             var randIndex = cocktailArray[Math.floor(Math.random() * cocktailArray.length)]
 
@@ -240,14 +255,19 @@ function appendCocktail(drink) {
     $cocktailContainer.innerHTML = "";
    
     // append the Cocktail name
-    var cocktailName = document.createElement("div");
+    var cocktailName = document.querySelector(".drink-name");
     cocktailName.textContent = drink.strDrink;
-    $cocktailContainer.append(cocktailName);
+    //$cocktailContainer.append(cocktailName);
 
     // append the Cocktail image
-    var cocktailImage = document.createElement("img");
-    cocktailImage.setAttribute("src", drink.strDrinkThumb);
-    $cocktailContainer.append(cocktailImage);
+    var cocktailImage = document.querySelector("#drinkimage");
+    cocktailImage.src = drink.strDrinkThumb;
+    //$cocktailContainer.append(cocktailImage);
 
+    var drinkLink = document.querySelector("#drinklink");
+    drinkLink.href = liquorLink;
+    drinkLink.setAttribute("target", "_blank")
+    drinkLink.innerText = "Click here for recipes!"
+    liquorLink = []
 
 }
