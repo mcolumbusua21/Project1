@@ -11,6 +11,7 @@
 </head>
 
 <body>
+  <!--Top navigation bar-->
   <nav class="topnav" id="myTopnav">
     <ul>
       <li class="name" class="active"><a href="index.html">Meals & Tails</a></li>
@@ -19,10 +20,10 @@
       <li><a class="navbar-item" class="recipes">Saved Recipes</a></li>
       <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
     </ul>
-
   </nav>
+<!--Ends here-->
 
-  <div class="container row">
+  <div class="container row first">
     <div class="modal is-active">
       <div class="modal-background"></div>
       <div class="modal-content ">
@@ -35,7 +36,7 @@
           </div>
         </div>
       </div> -->
-      <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
+      <button class="modal-close is-large is-active" id="modal-close-btn" aria-label="close"></button>
     </div>
 
     <!-- ------------------------PROTEIN------------------- -->
@@ -43,17 +44,6 @@
     <div class="card column" id="proteins-card">
       <div class="card-content" id="proteins-card-content">
         <div class="content">PROTEINS</div>
-      </div>
-      <div class="protein-card">
-        <select class="proteinslist" id="proteinList">
-          <option value="0">Select A Protein:</option>
-          <option value="Rice">Rice</option>
-          <option value="Flour">Flour</option>
-          <option value="Bread">Bread</option>
-          <option value="Noodles">Noodles</option>
-          <option value="Quinoa">Quinoa</option>
-          <option value="Brown Rice">Brown Rice</option>
-        </select>
       </div>
       <!-- BEEF -->
       <label class="checkbox">
@@ -87,35 +77,11 @@
       </label>
 
     </div>
-
-
-
     <!-- -----------------VEGETABLES-------------------- -->
     <div class="card column" id="vegetables-card">
       <div class="card-content">
         <div class="content">
           VEGETABLES
-        </div>
-        <div class="protein-card">
-          <select class="vegetableslist" id="vegetableslist">
-            <option value="0">Select A Grain:</option>
-            <option value="Onions">Onions</option>
-            <option value="Peppers">Peppers</option>
-            <option value="Potatoes">Potatoes</option>
-            <option value="Garlic">Garlic</option>
-            <option value="Tomatoes">Tomatoes</option>
-            <option value="Lettuce">Lettuce</option>
-            <option value="Broccoli">Broccoli</option>
-            <option value="Corn">Corn</option>
-            <option value="Spinach">Spinach</option>
-            <option value="Mushrooms">Mushrooms</option>
-            <option value="Asparagus">Asparagus</option>
-            <option value="Squash">Squash</option>
-            <option value="Zucchini">Zucchini</option>
-            <option value="Cucumber">Cucumber</option>
-            <option value="Rosemary">Rosemary</option>
-            <option value="Basil">Basil</option>
-          </select>
         </div>
         <!-- Onions -->
         <label class="checkbox">
@@ -137,11 +103,6 @@
           <input type="checkbox" name="vegetablesCheck" value="garlic">
           Garlic
         </label>
-        <!-- Carrot -->
-        <!-- <label class="checkbox">
-                    <input type="checkbox" name="vegetablesCheck" value="carrot">
-                    Carrots
-                  </label> -->
         <!-- Tomato -->
         <label class="checkbox">
           <input type="checkbox" name="vegetablesCheck" value="tomatoes">
@@ -157,21 +118,11 @@
           <input type="checkbox" name="vegetablesCheck" value="broccoli">
           Broccoli
         </label>
-        <!-- Corn -->
-        <!-- <label class="checkbox">
-                    <input type="checkbox" name="vegetablesCheck" value="corn">
-                    Corn
-                  </label> -->
         <!-- Spinach -->
         <label class="checkbox">
           <input type="checkbox" name="vegetablesCheck" value="spinach">
           Spinach
         </label>
-        <!-- Mushroom -->
-        <!-- <label class="checkbox">
-                    <input type="checkbox" name="vegetablesCheck" value="mushroom">
-                    Mushrooms
-                  </label> -->
         <!-- Asparagus -->
         <label class="checkbox">
           <input type="checkbox" name="vegetablesCheck" value="asparagus">
@@ -182,11 +133,6 @@
           <input type="checkbox" name="vegetablesCheck" value="squash">
           Squash
         </label>
-        <!-- Avocado -->
-        <!-- <label class="checkbox">
-                    <input type="checkbox" name="vegetablesCheck" value="avocado">
-                    Avocado
-                  </label> -->
         <!-- Zucchini -->
         <label class="checkbox">
           <input type="checkbox" name="vegetablesCheck" value="zucchini">
@@ -209,9 +155,6 @@
         </label>
       </div>
     </div>
-
-
-
     <!-- ------------------GRAINS---------------------- -->
     <div class="card column" id="grains-card">
       <div class="card-content">
@@ -266,64 +209,9 @@
         </label>
       </div>
     </div>
-
-    <div class="card column" id="grains-card">
-      <div class="card-content">
-        <div class="content">
-          Diet
-        </div>
-        <!-- Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="rice">
-          Rice
-        </label>
-        <!-- Flour -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="flour">
-          Flour
-        </label>
-        <!-- Bread -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="bread">
-          Bread
-        </label>
-        <!-- Noodles -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="spaghetti">
-          Noodles
-        </label>
-        <!-- Quinoa -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="quinoa">
-          Quinoa
-        </label>
-        <!-- Ramen -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="ramen">
-          Ramen
-        </label>
-        <!-- Tortillas -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="tortilla">
-          Tortillas
-        </label>
-        <!-- Oats -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="oats">
-          Oats
-        </label>
-        <!-- Brown Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="brown_rice">
-          Brown Rice
-        </label>
-      </div>
-    </div>
-
-
-
-
-    <!--Cokctails Div-->
+  </div>
+  <!--Cokctails Div-->
+  <div class="second">
     <div class="notification column">
       <h3>Cocktails</h3>
       <div class="dropdown">
@@ -351,39 +239,21 @@
             </a>
             <hr class="dropdown-divider">
             <a href="#" class="dropdown-item">
-             Random
+              Random
             </a>
           </div>
         </div>
       </div>
-
-
     </div>
-    <button class="search-button"> Search</button>
+  </div>
+  <button class="search-button"> Search</button>
 
   </div>
   </div>
-<<<<<<< HEAD
   <!-- TESTING APPEND RECIPE -->
   <div id="recipe-append"></div>
 
   <script src="script.js"></script>
-=======
-  <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
-</div>
-<button class="save-button">Save Recipe</button>
-
-        <a href="recipe.html">
-          <button> Login Page</button>
-          </a>
-        
-          <button class="search-button"> Search</button>
-       <!-- TESTING APPEND RECIPE -->
-
-          <div id="recipe-append"></div>
-
-        <script src="script.js"></script>
->>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
 </body>
 
 </html>

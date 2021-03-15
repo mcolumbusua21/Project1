@@ -137,13 +137,15 @@ function appendRecipe(recipe) {
 //Welcome modal
 var closeModal = document.querySelector("#modal-close-btn")
 var modalContainer = document.querySelector(".modal")
+var btnX = document.querySelector("modal-close-btn")
 
 closeModal.addEventListener("click", function(){
     modalContainer.classList.remove("is-active")
+    btnX.classList.remove("is-active")
+
 })
 
 
-<<<<<<< HEAD
 function messageContainer (){
     console.log(messageContainer)
     var btnClick; 
@@ -154,13 +156,10 @@ function messageContainer (){
 var cocktailbtn = document.querySelector(".dropdown");
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
-    
 }
 cocktailbtn.addEventListener("click", showDrinks)
+
 /// save recipes to local storage
-=======
-//save recipes to local storage
->>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
 // function saveRecipe(){
 //     console.log(saveRecipe);
     
@@ -168,13 +167,6 @@ cocktailbtn.addEventListener("click", showDrinks)
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
-<<<<<<< HEAD
-userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
-    console.log(liquorUrl)
-
-
-=======
 userString = (userString.replaceAll(""))
 var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
@@ -184,4 +176,3 @@ var liquorUrl = `https://www.liquor.com/${userString}-`
 // })
 
 localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
->>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
