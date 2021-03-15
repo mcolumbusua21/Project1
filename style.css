@@ -62,6 +62,7 @@
 #protein-card {
     width: fit-content;
 }
+<<<<<<< HEAD
 
 .modal-close-btn {
     display: none;
@@ -75,6 +76,8 @@
     margin-bottom: 20px;
     height:40vh;
 }
+=======
+>>>>>>> b29119b28844e299ba70664901e645f7781aedbf
 
 /*Querries */
 
@@ -115,3 +118,15 @@
       display: block;
     }
   } 
+<<<<<<< HEAD
+=======
+  .big-body {
+    background-color: darkslategrey;
+}
+ .about-section{
+    text-align: center;
+ }
+ h2 {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ }
+>>>>>>> b29119b28844e299ba70664901e645f7781aedbf

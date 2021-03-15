@@ -21,7 +21,7 @@
       <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
     </ul>
   </nav>
-<!--Ends here-->
+  <!--Ends here-->
 
   <div class="container row first">
     <div class="modal is-active">
@@ -154,105 +154,127 @@
           Basil
         </label>
       </div>
-    </div>
-    <!-- ------------------GRAINS---------------------- -->
-    <div class="card column" id="grains-card">
-      <div class="card-content">
-        <div class="content">
-          GRAINS
-        </div>
 
-        <!-- Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="rice">
-          Rice
-        </label>
-        <!-- Flour -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="flour">
-          Flour
-        </label>
-        <!-- Bread -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="bread">
-          Bread
-        </label>
-        <!-- Noodles -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="spaghetti">
-          Noodles
-        </label>
-        <!-- Quinoa -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="quinoa">
-          Quinoa
-        </label> -->
-        <!-- Ramen -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="ramen">
-          Ramen
-        </label>
-        <!-- Tortillas -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="tortilla">
-          Tortillas
-        </label>
-        <!-- Oats -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="oats">
-          Oats
-        </label>
-        <!-- Brown Rice -->
-        <label class="checkbox">
-          <input type="checkbox" name="grainsCheck" value="brown_rice">
-          Brown Rice
-        </label>
-      </div>
-    </div>
-  </div>
-  <!--Cokctails Div-->
-  <div class="second">
-    <div class="notification column">
-      <h3>Cocktails</h3>
-      <div class="dropdown">
-        <div class="dropdown-trigger">
-          <button class="cbutton" aria-haspopup="true" aria-controls="dropdown-menu">
-            <span>Cocktails</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-            </span>
-          </button>
+      <div class="card column" id="grains-card">
+        <div class="card-content">
+          <div class="content">
+            Grains/Gluten
+          </div>
+          <!-- Rice -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="rice">
+            Rice
+          </label>
+          <!-- Flour -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="flour">
+            Flour
+          </label>
+          <!-- Bread -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="bread">
+            Bread
+          </label>
+          <!-- Noodles -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="spaghetti">
+            Noodles
+          </label>
+          <!-- Quinoa -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="quinoa">
+            Quinoa
+          </label>
+          <!-- Ramen -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="ramen">
+            Ramen
+          </label>
+          <!-- Tortillas -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="tortilla">
+            Tortillas
+          </label>
+          <!-- Oats -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="oats">
+            Oats
+          </label>
+          <!-- Brown Rice -->
+          <label class="checkbox">
+            <input type="checkbox" name="grainsCheck" value="brown_rice">
+            Brown Rice
+          </label>
         </div>
-        <div class="dropdown-menu" id="dropdown-menu" role="menu">
-          <div class="dropdown-content">
-            <a href="#" class="dropdown-item">
-              Whiskey
-            </a>
-            <a class="dropdown-item">
-              Rum
-            </a>
-            <a href="#" class="dropdown-item is-active">
-              Henny
-            </a>
-            <a href="#" class="dropdown-item">
-              Wine
-            </a>
-            <hr class="dropdown-divider">
-            <a href="#" class="dropdown-item">
-              Random
-            </a>
+      </div>
+      <!--Cokctails Div-->
+      <div class="notification column">
+        <h3>Cocktails</h3>
+        <div class="dropdown">
+          <div class="dropdown-trigger">
+            <button class="cbutton" aria-haspopup="true" aria-controls="dropdown-menu">
+              <span>Cocktails</span>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </div>
+          <div class="dropdown-menu" id="dropdown-menu" role="menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">
+                Whiskey
+              </a>
+              <a class="dropdown-item">
+                Rum
+              </a>
+              <a href="#" class="dropdown-item is-active">
+                Tequia
+              </a>
+              <a href="#" class="dropdown-item">
+                Vodka
+              </a>
+              <a href="#" class="dropdown-item">
+                Gin
+              </a>
+              <a href="#" class="dropdown-item">
+                Wine
+              </a>
+              <a href="#" class="dropdown-item">
+                Beer
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <button class="search-button"> Search</button>
     </div>
   </div>
+  <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
+  </div>
+  <button class="save-button">Save Recipe</button>
+
+  <a href="recipe.html">
+  </a>
+  <!-- TESTING APPEND RECIPE -->
+
   <button class="search-button"> Search</button>
 
-  </div>
-  </div>
-  <!-- TESTING APPEND RECIPE -->
+  <!-- TESTING  -->
+
+  <select id="cocktails" name="cocktails">
+    <option value="Whiskey">Whiskey</option>
+    <option value="Vodka">Vodka</option>
+    <option value="Rum">Rum</option>
+    <option value="Tequila">Tequila</option>
+    <option value="Gin">Gin</option>
+    <option value="Wine">Wine</option>
+    <option value="Non_Alcoholic">Non Alcoholic</option>
+  </select>
+
   <div id="recipe-append"></div>
 
+  <div id="cocktail-append"></div>
+  <!-- END TEST -->
   <script src="script.js"></script>
 </body>
 
