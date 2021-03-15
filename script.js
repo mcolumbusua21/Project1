@@ -143,7 +143,14 @@ closeModal.addEventListener("click", function(){
 })
 
 
-//save recipes to local storage
+/* COcktail Button */
+var cocktailbtn = document.querySelector(".dropdown");
+function showDrinks () {
+    cocktailbtn.classList.toggle("is-active");
+    
+}
+cocktailbtn.addEventListener("click", showDrinks)
+/// save recipes to local storage
 // function saveRecipe(){
 //     console.log(saveRecipe);
     
@@ -151,15 +158,25 @@ closeModal.addEventListener("click", function(){
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
+// <<<<<<< HEAD
+userString = (userString.replaceAll(",", "-"))
+var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
+    console.log(liquorUrl)
+
+
+// =======
 userString = (userString.replaceAll(""))
 var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
 
 saveBtn.addEventListener("click", function (){
     console.log("saveBtn");
+    var randomRecipe = document.querySelector("#random-recipe")
+    localStorage.setItem("random-recipe", JSON.stringify(randomRecipe));
 })
 
-saveRecipe = function () {
-    localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+// saveRecipe = function () {
+//     localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
 
-}
+// }
+// >>>>>>> 608301f444a9a225cfd0fe11244230d56f4375a8
