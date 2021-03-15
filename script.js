@@ -3,6 +3,45 @@ const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
 const $recipeContainer = document.querySelector("#recipe-append")
 const saveBtn = document.querySelector(".save-button")
+
+var $savedDrinkContainer = document.querySelector("#saved-drink-container");
+
+var $savedFoodContainer = document.querySelector("#saved-food-container");
+
+var $clearList = document.querySelector(".clearlist")
+
+function renderSavedItems (){
+    var cocktailName = document.querySelector(".drink-name")
+    $savedDrinkContainer.innerHTML = "";
+    $savedFoodContainer.innerHTML = "";
+    // cocktailName.textContent = drink.strDrink;
+    if(savedRecipeArr){
+    for (const foodUrl of savedRecipeArr) {
+        var aTag = document.createElement("a")
+        aTag.setAttribute("href", foodUrl);
+        aTag.textContent = foodUrl;
+        $savedFoodContainer.append(aTag);
+    }}
+    for (const drinkUrl of savedLiquorArr) {
+        var aTag = document.createElement("a")
+        aTag.setAttribute("href", drinkUrl);
+        // aTag.textContent = cocktailName.textContent;
+        aTag.textContent = drinkUrl;
+        $savedDrinkContainer.append(aTag);
+    }
+}
+
+$clearList.addEventListener("click", function() {
+    localStorage.clear();
+    $savedDrinkContainer.innerHTML = "";
+    $savedFoodContainer.innerHTML = "";
+
+    savedLiquorArr = getSavedLiquor()
+    savedRecipeArr = getSavedRecipes()
+
+})
+
+
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
@@ -81,8 +120,8 @@ $btn.addEventListener("click", (event) => {
     var userString = userFoodPreference.toString();
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
-    foodNetworkUrl = [];
-    foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
+
+    foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
 
@@ -92,14 +131,15 @@ $btn.addEventListener("click", (event) => {
    var liquorString = cocktailMenu.value
    console.log(liquorString)
 
-    var liquorUrl = liquorLink.push(`https://www.liquor.com/search?q=${liquorString}`)
-    console.log(liquorUrl)
+    liquorLink = `https://www.liquor.com/search?q=${liquorString}`
+
 });
 // *************************************************
-var foodNetworkUrl = [];
 
-liquorLink = []
 
+var allFoodsArr = [];
+var liquorLink;
+var foodNetworkUrl;
 // -----------------FOOD RECIPE API----------------------
 
 
@@ -125,7 +165,7 @@ function fetchFoodData(){
 
             // get random recipe from random Index
             var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
-            console.log(randomRecipe)
+
             appendRecipe(randomRecipe)
 
         })
@@ -195,20 +235,44 @@ var userLiquorPreference = []
 
 saveBtn.addEventListener("click", function (){
     console.log("saveBtn");
-    var randomRecipe = document.querySelector("#random-recipe")
-    localStorage.setItem("random-recipe", JSON.stringify(randomRecipe));
+
+    savedRecipeArr.push(foodNetworkUrl)
+    localStorage.setItem("saved-recipe", JSON.stringify(savedRecipeArr));
+
+    savedLiquorArr.push(liquorLink)
+    localStorage.setItem("saved-drink", JSON.stringify(savedLiquorArr));
+  
+    renderSavedItems()
 })
 
-// saveRecipe = function () {
-//     localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+var savedLiquorArr = getSavedLiquor()
 
-// }
-// >>>>>>> 608301f444a9a225cfd0fe11244230d56f4375a8
-localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+function getSavedLiquor (){
+    var drinkData = JSON.parse(localStorage.getItem("saved-drink") )
+    if (drinkData) {
+        return drinkData
+    }else {
+        return []
+    }
+}
 
+var savedRecipeArr = getSavedRecipes()
+
+function getSavedRecipes (){
+    var recipeData = JSON.parse(localStorage.getItem("saved-recipe") )
+    if (recipeData) {
+        return recipeData
+    }else {
+        return []
+    }
+}
+
+
+
+console.log(savedLiquorArr)
 // --------COCKTAIL API TESTING-------------
 var cocktailMenu = document.querySelector("#cocktails")
-console.log(cocktailMenu)
+
 
 function fetchCocktailData(drink) {
         // if non alcoholic, fetch this API then return
@@ -225,9 +289,9 @@ function fetchCocktailData(drink) {
             console.log(randCocktail)
             appendCocktail(randCocktail)
             cocktailArray = []
-            return
+
             })
-        }
+        } else{
         var cocktailUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
         console.log(cocktailUrl)
         
@@ -244,7 +308,7 @@ function fetchCocktailData(drink) {
             console.log(randCocktail)
             appendCocktail(randCocktail)
             cocktailArray = []
-        })
+        })}
 }
 
 var $cocktailContainer = document.querySelector("#cocktail-append")
@@ -268,6 +332,8 @@ function appendCocktail(drink) {
     drinkLink.href = liquorLink;
     drinkLink.setAttribute("target", "_blank")
     drinkLink.innerText = "Click here for recipes!"
-    liquorLink = []
+    // liquorLink = []
 
 }
+
+renderSavedItems()
