@@ -62,8 +62,8 @@ $btn.addEventListener("click", (event) => {
     // fetch data from foodDB API
     fetchFoodData();
 
-    fetchCocktailData(cocktailMenu);
-  
+    fetchCocktailData(cocktailMenu.value);
+  console.log("COCKTAIL VALUE" + cocktailMenu.value)
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
@@ -189,17 +189,35 @@ saveBtn.addEventListener("click", function (){
 localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
 
 // --------COCKTAIL API TESTING-------------
-var cocktailMenu = document.querySelector("#cocktails").value
+var cocktailMenu = document.querySelector("#cocktails")
 console.log(cocktailMenu)
 
 function fetchCocktailData(drink) {
- 
+        // if non alcoholic, fetch this API then return
+        var naUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
+
+        if(drink === "Non_Alcoholic"){
+            fetch(naUrl)
+            .then((data) => data.json())
+            .then(function (mocktails) {
+                cocktailArray.push(mocktails.drinks)
+                var randIndex = cocktailArray[Math.floor(Math.random() * cocktailArray.length)]
+
+            var randCocktail = randIndex[Math.floor(Math.random() * randIndex.length)]
+            console.log(randCocktail)
+            appendCocktail(randCocktail)
+            cocktailArray = []
+            return
+            })
+        }
         var cocktailUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
-        
+        console.log(cocktailUrl)
         
         fetch(cocktailUrl)
         .then((data) => data.json())
         .then(function (cocktails) {    
+            console.log(cocktails)
+            console.log(cocktails.drinks)
             cocktailArray.push(cocktails.drinks)
             console.log(cocktailArray)
 
@@ -208,6 +226,7 @@ function fetchCocktailData(drink) {
             var randCocktail = randIndex[Math.floor(Math.random() * randIndex.length)]
             console.log(randCocktail)
             appendCocktail(randCocktail)
+            cocktailArray = []
         })
 }
 
