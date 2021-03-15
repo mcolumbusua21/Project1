@@ -12,16 +12,261 @@
 
 <body>
   <!--Top navigation bar-->
-  <nav class="topnav" id="myTopnav">
-    <ul>
-      <li class="name" class="active"><a href="index.html">Meals & Tails</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutme.html" class="navbar-item" class="about-us">About Us</a></li>
-      <li><a class="navbar-item" class="recipes">Saved Recipes</a></li>
-      <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
-    </ul>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="#">
+        <!-- <img src="images/logo.png" width="75px" height="75"class="logo"> -->
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start center">
+        <a class="navbar-item">
+          Home
+        </a>
+  
+        <a class="navbar-item">
+          About Us
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item">
+              Saved Food Receipes
+            </a>
+            <a class="navbar-item">
+              Saved Drinks
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item clearlist">
+             Clear List
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </nav>
   <!--Ends here-->
+<!--Hero Set Up-->
+<section class="hero is-small is-info">
+  <div class="hero-body">
+  <div class="hero-bg"></div>
+  </div>
+</section>
+  <!--header Banner-->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container">
+        <h1>Meals & Tails</h1>
+      </div>
+    </div>
+  </section>
+
+  <!--Containers of Check List-->
+  <section class="section has-background-white">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <article class="media notification is-info">
+            <div class="media-content">
+              <div class="content">
+              <!-- ------------------------PROTEIN------------------- -->
+                <h1 class="title is-size-4">Protein</h1>
+                <!-- BEEF -->
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox" name="proteinsCheck" data-food="beef" value="beef">
+                  Beef
+                </label>
+                <!-- Chicken -->
+                <label class="checkbox">
+                  <input type="checkbox" class="checkbox" name="proteinsCheck" value="chicken">
+                  Chicken
+                </label>
+                <!-- Pork -->
+                <label class="checkbox">
+                  <input type="checkbox" name="proteinsCheck" value="pork">
+                  Pork
+                </label>
+                <!-- Fish -->
+                <label class="checkbox">
+                  <input type="checkbox" name="proteinsCheck" value="salmon">
+                  Fish
+                </label>
+                <!-- Tofu -->
+                <label class="checkbox">
+                  <input type="checkbox" name="proteinsCheck" value="tofu">
+                  Tofu
+                </label>
+                <!-- Eggs -->
+                <label class="checkbox">
+                  <input type="checkbox" name="proteinsCheck" value="eggs">
+                  Eggs
+                </label>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+        <div class="column">
+          <article class="media notification is-info">
+            <div class="media-content">
+              <div class="content">
+                <!-- -----------------VEGETABLES-------------------- -->
+                <h1 class="title is-size-4">Vegatables</h1>
+                <!-- Onions -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="onion">
+                  Onions
+                </label>
+                <!-- Peppers -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="pepper">
+                  Peppers
+                </label>
+                <!-- Potatoes -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="potatoes">
+                  Potatoes
+                </label>
+                <!-- Garlic -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="garlic">
+                  Garlic
+                </label>
+                <!-- Tomato -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="tomatoes">
+                  Tomatoes
+                </label>
+                <!-- Lettuce -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="cabbage">
+                  Lettuce
+                </label>
+                <!-- Broccoli -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="broccoli">
+                  Broccoli
+                </label>
+                <!-- Spinach -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="spinach">
+                  Spinach
+                </label>
+                <!-- Asparagus -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="asparagus">
+                  Asparagus
+                </label>
+                <!-- Squash -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="squash">
+                  Squash
+                </label>
+                <!-- Zucchini -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="zucchini">
+                  Zucchini
+                </label>
+                <!-- Cucumber -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="cucumber">
+                  Cucumber
+                </label>
+                <!-- Rosemary -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="rosemary">
+                  Rosemary
+                </label>
+                <!-- Basil -->
+                <label class="checkbox">
+                  <input type="checkbox" name="vegetablesCheck" value="basil">
+                  Basil
+                </label>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+        <div class="column">
+          <article class="media notification is-info">
+            <div class="media-content">
+              <div class="content">
+              <!-- ------------------------Grains/Gluten------------------- -->
+                <h1 class="title is-size-4">Grains/Gluten</h1>
+                <!-- Rice -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="rice">
+          Rice
+        </label>
+        <!-- Flour -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="flour">
+          Flour
+        </label>
+        <!-- Bread -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="bread">
+          Bread
+        </label>
+        <!-- Noodles -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="spaghetti">
+          Noodles
+        </label>
+        <!-- Quinoa -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="quinoa">
+          Quinoa
+        </label>
+        <!-- Ramen -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="ramen">
+          Ramen
+        </label>
+        <!-- Tortillas -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="tortilla">
+          Tortillas
+        </label>
+        <!-- Oats -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="oats">
+          Oats
+        </label>
+        <!-- Brown Rice -->
+        <label class="checkbox">
+          <input type="checkbox" name="grainsCheck" value="brown_rice">
+          Brown Rice
+        </label>
+
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+        <!--End of Columns Section-->
+      </div>
+
+  </section>
 
   <div class="container row first">
     <div class="modal is-active mod2">
@@ -35,234 +280,66 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
       <button class="modal-close bt1 is-large is-active" id="modal-close-btn1" aria-label="close"></button>
     </div>
 
-    <!-- ------------------------PROTEIN------------------- -->
 
-    <div class="card column" id="proteins-card">
-      <div class="card-content" id="proteins-card-content">
-        <div class="content">PROTEINS</div>
-      </div>
-      <!-- BEEF -->
-      <label class="checkbox">
-        <input type="checkbox" class="checkbox" name="proteinsCheck" data-food="beef" value="beef">
-        Beef
-      </label>
-      <!-- Chicken -->
-      <label class="checkbox">
-        <input type="checkbox" class="checkbox" name="proteinsCheck" value="chicken">
-        Chicken
-      </label>
-      <!-- Pork -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="pork">
-        Pork
-      </label>
-      <!-- Fish -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="salmon">
-        Fish
-      </label>
-      <!-- Tofu -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="tofu">
-        Tofu
-      </label>
-      <!-- Eggs -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="eggs">
-        Eggs
-      </label>
-
-    </div>
-    <!-- -----------------VEGETABLES-------------------- -->
-    <div class="card column" id="vegetables-card">
-      <div class="card-content">
-        <div class="content">
-          VEGETABLES
+    <!--Cokctails Div-->
+    <div class="notification column is-5">
+      <h3>Cocktails</h3>
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button is-dark" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span>Cocktails</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="true"></i>
+            </span>
+          </button>
         </div>
-        <!-- Onions -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="onion">
-          Onions
-        </label>
-        <!-- Peppers -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="pepper">
-          Peppers
-        </label>
-        <!-- Potatoes -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="potatoes">
-          Potatoes
-        </label>
-        <!-- Garlic -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="garlic">
-          Garlic
-        </label>
-        <!-- Tomato -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="tomatoes">
-          Tomatoes
-        </label>
-        <!-- Lettuce -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="cabbage">
-          Lettuce
-        </label>
-        <!-- Broccoli -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="broccoli">
-          Broccoli
-        </label>
-        <!-- Spinach -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="spinach">
-          Spinach
-        </label>
-        <!-- Asparagus -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="asparagus">
-          Asparagus
-        </label>
-        <!-- Squash -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="squash">
-          Squash
-        </label>
-        <!-- Zucchini -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="zucchini">
-          Zucchini
-        </label>
-        <!-- Cucumber -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="cucumber">
-          Cucumber
-        </label>
-        <!-- Rosemary -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="rosemary">
-          Rosemary
-        </label>
-        <!-- Basil -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="basil">
-          Basil
-        </label>
-      </div>
-    </div>
-
-      <div class="card column" id="grains-card">
-        <div class="card-content">
-          <div class="content">
-            Grains/Gluten
-          </div>
-          <!-- Rice -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="rice">
-            Rice
-          </label>
-          <!-- Flour -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="flour">
-            Flour
-          </label>
-          <!-- Bread -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="bread">
-            Bread
-          </label>
-          <!-- Noodles -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="spaghetti">
-            Noodles
-          </label>
-          <!-- Quinoa -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="quinoa">
-            Quinoa
-          </label>
-          <!-- Ramen -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="ramen">
-            Ramen
-          </label>
-          <!-- Tortillas -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="tortilla">
-            Tortillas
-          </label>
-          <!-- Oats -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="oats">
-            Oats
-          </label>
-          <!-- Brown Rice -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="brown_rice">
-            Brown Rice
-          </label>
-        </div>
-      </div>
-      <!--Cokctails Div-->
-      <div class="notification column">
-        <h3>Cocktails</h3>
-        <div class="dropdown">
-          <div class="dropdown-trigger">
-            <button class="cbutton" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>Cocktails</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                Whiskey
-              </a>
-              <a class="dropdown-item">
-                Rum
-              </a>
-              <a href="#" class="dropdown-item is-active">
-                Tequia
-              </a>
-              <a href="#" class="dropdown-item">
-                Vodka
-              </a>
-              <a href="#" class="dropdown-item">
-                Gin
-              </a>
-              <a href="#" class="dropdown-item">
-                Wine
-              </a>
-              <a href="#" class="dropdown-item">
-                Beer
-              </a>
-            </div>
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a href="#" class="dropdown-item">
+              Whiskey
+            </a>
+            <a class="dropdown-item">
+              Rum
+            </a>
+            <a href="#" class="dropdown-item is-active">
+              Tequia
+            </a>
+            <a href="#" class="dropdown-item">
+              Vodka
+            </a>
+            <a href="#" class="dropdown-item">
+              Gin
+            </a>
+            <a href="#" class="dropdown-item">
+              Wine
+            </a>
+            <a href="#" class="dropdown-item">
+              Beer
+            </a>
           </div>
         </div>
       </div>
-      <button class="search-button"> Search</button>
     </div>
+    <button class="button is-normal search-button"> Search</button>
+  </div>
   </div>
   <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
   </div>
-  <button class="save-button">Save Recipe</button>
+  <button class="button is-normal save-button">Save Recipe</button>
 
   <a href="recipe.html">
   </a>
   <!-- TESTING APPEND RECIPE -->
 
-  <button class="search-button"> Search</button>
+  <button class="button is-normal search-button"> Search</button>
 
   <!-- TESTING  -->
 
-  <select id="cocktails" name="cocktails">
+  <select class="select" id="cocktails" name="cocktails">
     <option value="Whiskey">Whiskey</option>
     <option value="Vodka">Vodka</option>
     <option value="Rum">Rum</option>
@@ -276,6 +353,17 @@
 
   <div id="cocktail-append"></div>
   <!-- END TEST -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <p>
+          <strong>Meals & Tails</strong> by <a href="aboutme.html">Team 3</a>. The source code is licensed
+          <a href="#">Trilogy Education Services</a>. The website content
+          is licensed <a href="#">CC BY NC SA 4.0</a>.
+        </p>
+      </div>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 
