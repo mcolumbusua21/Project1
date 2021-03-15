@@ -62,7 +62,6 @@
 #protein-card {
     width: fit-content;
 }
-<<<<<<< HEAD
 
 /*Querries */
 
@@ -101,14 +100,12 @@
       flex-direction: column;
     }
   } 
-=======
- .big-body {
-     background-color: darkslategrey;
+  .big-body {
+    background-color: darkslategrey;
+}
+ .about-section{
+    text-align: center;
  }
-  .about-section{
-     text-align: center;
-  }
-  h2 {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-  }
->>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
+ h2 {
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+ }
