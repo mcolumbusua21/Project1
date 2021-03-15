@@ -141,9 +141,12 @@ function appendRecipe(recipe) {
 //Welcome modal
 var closeModal = document.querySelector("#modal-close-btn")
 var modalContainer = document.querySelector(".modal")
+var btnX = document.querySelector("modal-close-btn")
 
 closeModal.addEventListener("click", function(){
     modalContainer.classList.remove("is-active")
+    btnX.classList.remove("is-active")
+
 })
 
 
@@ -151,9 +154,9 @@ closeModal.addEventListener("click", function(){
 var cocktailbtn = document.querySelector(".dropdown");
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
-    
 }
 cocktailbtn.addEventListener("click", showDrinks)
+
 /// save recipes to local storage
 //save recipes to local storage
 // function saveRecipe(){
