@@ -1,12 +1,18 @@
+/* Custom Font From Logo */
+h1 {font-size: 72px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+h2 {font-size: 60px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+h3 {font-size: 48px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+h4 {font-size: 32px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+h5 {font-size: 24px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+h6 {font-size: 18px; font-family:'Allrounder Monument W00 Book' , 'fallback-font'}
+/*Ends here */
+
 * {
     margin: 0 auto;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Allrounder Monument W00 Book'Arial, Helvetica, sans-serif;;
 }
-
- h2 {
-     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
- }
 
  .hero.is-info {
      background-color: #171b22;
@@ -36,13 +42,49 @@
      position: sticky;
      top: 0;
  }
-
- .nav-transparent {
-     background-color: transparent;
-     color: white;
+.navbar-link:not(.is-arrowless)::after {
+    border-color: rgb(74, 74, 74);
+}
+ .sticky{
+     background-color: #171b22;
+     color: #fff;
+ }
+ .scroll {
+     background-color: #fff;
+     color: #171b22;
  }
 
- .nav-colored {
-     background-color: white;
-     color:#171b22;
+ .intro {
+     font-size: 1.85em;
+     font-family: 'Allrounder Monument W00 Book'Arial, Helvetica, sans-serif;
  }
+
+ .notification.is-info{
+     background-color: #f5f5f5;
+     /* color:#171b22 */
+ }
+
+ /*Add background to the containers */
+ /*Photo by <a href="https://unsplash.com/@tempestdesigner?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Mark DeYoung</a> on <a href="/s/photos/protein?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+ .bg1 {
+     background: url(images/protein.jpg); 
+     background-size: cover;
+     background-repeat: no-repeat;
+     box-shadow:inset 0 0 0 2000px rgba(23, 27, 34, 0.3);
+ }
+
+ /*Photo by <a href="https://unsplash.com/@annapelzer?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Anna Pelzer</a> on <a href="/s/photos/vegetables?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+ .bg2 {
+    background: url(images/veggies.jpg);
+    background-size: cover;
+     background-repeat: no-repeat;
+     box-shadow:inset 0 0 0 2000px rgba(23, 27, 34, 0.3);
+}
+
+/*Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="/s/photos/rice?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>*/
+.bg3 {
+    background: url(images/rice.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow:inset 0 0 0 2000px rgba(23, 27, 34 0.3);
+}

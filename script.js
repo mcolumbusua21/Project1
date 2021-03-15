@@ -9,18 +9,15 @@ const saveBtn = document.querySelector(".save-button")
 // })
 
 //Code for Nav bar on scroll color change
-var navbar = document.querySelector(".navbar")
-window.onload = function() {
-    if (document.body.scrollTop >= 200 || document.documentElement.scrollTop >= 200 ){
-        myNav.classList.add("nav-colored");
-        myNav.classList.remove("nav-transparent");
-    } 
-    else {
-        myNav.classList.add("nav-transparent");
-        myNav.classList.remove("nav-colored");
-    }
-    };
-    
+var myNav = document.getElementById("mainNav");
+window.onscroll = function() {
+  "use strict";
+  if (document.body.scrollTop >= 280 || document.documentElement.scrollTop >= 280) {
+    myNav.classList.add("scroll");
+  } else {
+    myNav.classList.remove("scroll");
+  }
+};
 // ----------------FOOD PREFERENCE LOGIC------------------
 let userFoodPreference = [];
 

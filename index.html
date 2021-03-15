@@ -7,13 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
   <link rel="stylesheet" href="/style.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
   <title>Meals & Tails</title>
 </head>
 
 <body>
   <!--Top navigation bar-->
-  <nav class="navbar sticky" role="navigation" aria-label="main navigation">
+  <nav class="navbar sticky" id="mainNav" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="#">
         <!-- <img src="images/logo.png" width="75px" height="75"class="logo"> -->
@@ -27,12 +26,12 @@
     </div>
 
     <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start center">
-        <a class="navbar-item">
+      <div class="navbar-start center white">
+        <a class="navbar-item one">
           Home
         </a>
 
-        <a class="navbar-item">
+        <a class="navbar-item two">
           About Us
         </a>
 
@@ -55,6 +54,18 @@
           </div>
         </div>
       </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-normal save-button">
+              Save Food
+            </a>
+            <a class="button is-normal save-button">
+              Save Drink
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
   <!--Ends here-->
@@ -68,21 +79,47 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container">
-        <h1>Mix & Match is our business</h1>
+        <h1 class="intro">Mix & Match is our business</h1>
       </div>
     </div>
   </section>
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Tweets</p>
+        <p class="title">3,456</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Following</p>
+        <p class="title">123</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Followers</p>
+        <p class="title">456K</p>
+      </div>
+    </div>
+    <div class="level-item has-text-centered">
+      <div>
+        <p class="heading">Likes</p>
+        <p class="title">789</p>
+      </div>
+    </div>
+  </nav>
 
   <!--Containers of Check List-->
   <section class="section has-background-white">
     <div class="container">
       <div class="columns">
         <div class="column">
-          <article class="media notification is-info">
+          <article class="media notification is-info bg1 opacity">
             <div class="media-content">
               <div class="content">
                 <!-- ------------------------PROTEIN------------------- -->
-                <h1 class="title is-size-4">Protein</h1>
+                <h3 class="title is-size-4">Protein</h3>
                 <!-- BEEF -->
                 <label class="checkbox">
                   <input type="checkbox" class="checkbox" name="proteinsCheck" data-food="beef" value="beef">
@@ -122,11 +159,11 @@
         </div>
 
         <div class="column">
-          <article class="media notification is-info">
+          <article class="media notification is-info bg2 opacity">
             <div class="media-content">
               <div class="content">
                 <!-- -----------------VEGETABLES-------------------- -->
-                <h1 class="title is-size-4">Vegatables</h1>
+                <h3 class="title is-size-4">Vegatables</h3>
                 <!-- Onions -->
                 <label class="checkbox">
                   <input type="checkbox" name="vegetablesCheck" value="onion">
@@ -206,11 +243,11 @@
         </div>
 
         <div class="column">
-          <article class="media notification is-info">
+          <article class="media notification is-info bg3 opacity">
             <div class="media-content">
               <div class="content">
                 <!-- ------------------------Grains/Gluten------------------- -->
-                <h1 class="title is-size-4">Grains/Gluten</h1>
+                <h3 class="title is-size-4">Grains/Gluten</h3>
                 <!-- Rice -->
                 <label class="checkbox">
                   <input type="checkbox" name="grainsCheck" value="rice">
@@ -330,7 +367,7 @@
   </div>
   <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
   </div>
-  <button class="button is-normal save-button">Save Recipe</button>
+  <!-- <button class="button is-normal save-button">Save Recipe</button> -->
 
   <a href="recipe.html">
   </a>
@@ -339,20 +376,26 @@
   <button class="button is-normal search-button"> Search</button>
 
   <!-- TESTING  -->
+  <div class="select is-primary">
+    <select id="cocktails" name="cocktails">
+      <option class="dropdown-item" value="Whiskey">Whiskey</option>
+      <option class="dropdown-item" value="Vodka">Vodka</option>
+      <option class="dropdown-item" value="Rum">Rum</option>
+      <option class="dropdown-item" value="Tequila">Tequila</option>
+      <option class="dropdown-item" value="Gin">Gin</option>
+      <option class="dropdown-item" value="Wine">Wine</option>
+      <option class="dropdown-item" value="Non_Alcoholic">Non Alcoholic</option>
+    </select>
+  </div>
 
-  <select class="select" id="cocktails" name="cocktails">
-    <option value="Whiskey">Whiskey</option>
-    <option value="Vodka">Vodka</option>
-    <option value="Rum">Rum</option>
-    <option value="Tequila">Tequila</option>
-    <option value="Gin">Gin</option>
-    <option value="Wine">Wine</option>
-    <option value="Non_Alcoholic">Non Alcoholic</option>
-  </select>
+  <div id="recipe-append">
+    <!--Recipe Content for food-->
+  </div>
 
-  <div id="recipe-append"></div>
+  <div id="cocktail-append">
+    <!--Cocktail Content-->
+  </div>
 
-  <div id="cocktail-append"></div>
   <!-- END TEST -->
   <div id="map"></div>
   <footer class="footer">
@@ -366,10 +409,6 @@
       </div>
     </div>
   </footer>
-  <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
-      async
-    ></script>
   <script src="script.js"></script>
 </body>
 
