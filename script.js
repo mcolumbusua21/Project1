@@ -6,10 +6,10 @@ const saveBtn = document.querySelector(".save-button")
 var cocktailbtn = document.querySelector(".dropdown");
 var cocktailMenu = document.querySelector("#cocktails");
 var recipeUrl = document.querySelector("#foodlink");
-aboutUs.addEventListener("click", function(e) {
-    console.log("click");
+// aboutUs.addEventListener("click", function(e) {
+//     console.log("click");
 
-})
+// })
 
 //Code for Nav bar on scroll color change
 var myNav = document.getElementById("mainNav");
@@ -163,14 +163,14 @@ closeModal.addEventListener("click", function() {
 function showDrinks() {
     cocktailbtn.classList.toggle("is-active");
 }
-cocktailbtn.addEventListener("click", showDrinks)
+// cocktailbtn.addEventListener("click", showDrinks)
 
 /// save recipes to local storage
 //save recipes to local storage
-function saveRecipe() {
-    console.log(saveRecipe);
+// function saveRecipe() {
+//     console.log(saveRecipe);
 
-}
+// }
 /// Cocktail link
 userLiquorPreference = []
 var userString = cocktailMenu.value;
@@ -184,13 +184,13 @@ console.log(liquorUrl)
 saveBtn.addEventListener("click", function() {
     console.log("saveBtn");
     var randomRecipe = document.querySelector("#random-recipe")
-    localStorage.setItem("random-recipe", JSON.stringify(randomRecipe));
+    localStorage.setItem("random-recipe", JSON.stringify(foodNetworkUrl));
 })
 
-saveRecipe = function() {
-        localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+// saveRecipe = function() {
+//         localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
 
-    }
+//     }
     // >>>>>>> 608301f444a9a225cfd0fe11244230d56f4375a8
 localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
 
