@@ -121,6 +121,15 @@ function messageContainer (){
     console.log(messageContainer)
     var btnClick; 
 }
+
+
+/* COcktail Button */
+var cocktailbtn = document.querySelector(".dropdown");
+function showDrinks () {
+    cocktailbtn.classList.toggle("is-active");
+    
+}
+cocktailbtn.addEventListener("click", showDrinks)
 /// save recipes to local storage
 // function saveRecipe(){
 //     console.log(saveRecipe);
@@ -132,3 +141,5 @@ var userString = userLiquorPreference.toString();
 userString = (userString.replaceAll(",", "-"))
 var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
     console.log(liquorUrl)
+
+
