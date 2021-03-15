@@ -155,8 +155,11 @@ userString = (userString.replaceAll(""))
 var liquorUrl = `https://www.liquor.com/${userString}-`
     console.log(liquorUrl)
 
-// saveBtn.addEventListener("click", function(event){
-//     saveRecipe.
-// })
+saveBtn.addEventListener("click", function (){
+    console.log("saveBtn");
+})
 
-localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+saveRecipe = function () {
+    localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+
+}
