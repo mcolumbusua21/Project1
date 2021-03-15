@@ -74,6 +74,7 @@ $btn.addEventListener("click", (event) => {
     fetchFoodData();
 
     fetchCocktailData(cocktailMenu.value);
+    userLiquorPreference.push(cocktailMenu.value)
   console.log("COCKTAIL VALUE" + cocktailMenu.value)
 
     // change userFoodPreference into string
@@ -84,10 +85,20 @@ $btn.addEventListener("click", (event) => {
     foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
+
+
+    
+
+   var liquorString = cocktailMenu.value
+   console.log(liquorString)
+
+    var liquorUrl = liquorLink.push(`https://www.liquor.com/search?q=${liquorString}`)
+    console.log(liquorUrl)
 });
 // *************************************************
 var foodNetworkUrl = [];
 
+liquorLink = []
 
 // -----------------FOOD RECIPE API----------------------
 
@@ -164,7 +175,7 @@ var cocktailbtn = document.querySelector(".dropdown");
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
 }
-cocktailbtn.addEventListener("click", showDrinks)
+// cocktailbtn.addEventListener("click", showDrinks)
 
 /// save recipes to local storage
 //save recipes to local storage
@@ -173,18 +184,14 @@ cocktailbtn.addEventListener("click", showDrinks)
     
 // }
 /// Cocktail link
-userLiquorPreference = []
-var userString = userLiquorPreference.toString();
-// <<<<<<< HEAD
-userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
-    console.log(liquorUrl)
+var userLiquorPreference = []
 
 
-// =======
-userString = (userString.replaceAll(""))
-var liquorUrl = `https://www.liquor.com/${userString}-`
-    console.log(liquorUrl)
+
+
+// userString = (userString.replaceAll(""))
+// var liquorUrl = `https://www.liquor.com/${userString}-`
+//     console.log(liquorUrl)
 
 saveBtn.addEventListener("click", function (){
     console.log("saveBtn");
@@ -227,10 +234,9 @@ function fetchCocktailData(drink) {
         fetch(cocktailUrl)
         .then((data) => data.json())
         .then(function (cocktails) {    
-            console.log(cocktails)
-            console.log(cocktails.drinks)
+            
             cocktailArray.push(cocktails.drinks)
-            console.log(cocktailArray)
+            
 
             var randIndex = cocktailArray[Math.floor(Math.random() * cocktailArray.length)]
 
@@ -258,11 +264,10 @@ function appendCocktail(drink) {
     cocktailImage.src = drink.strDrinkThumb;
     //$cocktailContainer.append(cocktailImage);
 
-    var liquorUrl = document.querySelector("#drinklink");
-    liquorUrl.href = cocktailArray;
-    liquorUrl.setAttribute("target", "_blank")
-    liquorUrl.innerText = "Click here for recipes!"
-    //$recipeContainer.append(recipeUrl)
-
+    var drinkLink = document.querySelector("#drinklink");
+    drinkLink.href = liquorLink;
+    drinkLink.setAttribute("target", "_blank")
+    drinkLink.innerText = "Click here for recipes!"
+    liquorLink = []
 
 }
