@@ -3,6 +3,9 @@ const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
 const $recipeContainer = document.querySelector("#recipe-append")
 const saveBtn = document.querySelector(".save-button")
+var cocktailbtn = document.querySelector(".dropdown");
+var cocktailMenu = document.querySelector("#cocktails");
+console.log(cocktailMenu)
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
@@ -84,6 +87,11 @@ $btn.addEventListener("click", (event) => {
     foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
+
+    /* liquor */
+   var userString2 = (userString2.replaceAll(",", "-"))
+var liquorUrl = `https://www.liquor.com/search?q=${userString2}-`
+    console.log(liquorUrl)
 });
 // *************************************************
 var foodNetworkUrl = [];
@@ -158,9 +166,6 @@ closeModal.addEventListener("click", function(){
 
 })
 
-
-/* COcktail Button */
-var cocktailbtn = document.querySelector(".dropdown");
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
 }
@@ -174,16 +179,12 @@ cocktailbtn.addEventListener("click", showDrinks)
 // }
 /// Cocktail link
 userLiquorPreference = []
-var userString = userLiquorPreference.toString();
+var userString = cocktailMenu.value;
+//userLiquorPreference.toString();
 // <<<<<<< HEAD
+
 userString = (userString.replaceAll(",", "-"))
-var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
-    console.log(liquorUrl)
-
-
-// =======
-userString = (userString.replaceAll(""))
-var liquorUrl = `https://www.liquor.com/${userString}-`
+var liquorUrl = `https://www.liquor.com/search?q=${userString}-`
     console.log(liquorUrl)
 
 saveBtn.addEventListener("click", function (){
@@ -200,9 +201,6 @@ saveBtn.addEventListener("click", function (){
 localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
 
 // --------COCKTAIL API TESTING-------------
-var cocktailMenu = document.querySelector("#cocktails")
-console.log(cocktailMenu)
-
 function fetchCocktailData(drink) {
         // if non alcoholic, fetch this API then return
         var naUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic`
@@ -258,11 +256,12 @@ function appendCocktail(drink) {
     cocktailImage.src = drink.strDrinkThumb;
     //$cocktailContainer.append(cocktailImage);
 
-    var liquorUrl = document.querySelector("#drinklink");
-    liquorUrl.href = cocktailArray;
-    liquorUrl.setAttribute("target", "_blank")
-    liquorUrl.innerText = "Click here for recipes!"
+    var lick1 = document.querySelector("#drinklink");
+    lick1.href = liquorUrl;
+    lick1.setAttribute("target", "_blank")
+    lick1.innerText = "Click here for recipes!"
     //$recipeContainer.append(recipeUrl)
+    userString = "";
 
 
 }
