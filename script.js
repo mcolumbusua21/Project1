@@ -15,6 +15,9 @@ let userFoodPreference = [];
 // recipes get pushed here, then chosen from random
 var recipeArray=[];
 
+// cocktails get pushed here, then chose from random
+var cocktailArray = [];
+
 
 // collecting FOOD checkbox values
 function getFoodPreference(name, name2, name3) {
@@ -61,13 +64,14 @@ $btn.addEventListener("click", (event) => {
     // fetch data from foodDB API
     fetchFoodData();
 
+    fetchCocktailData(cocktailMenu);
   
 
     // change userFoodPreference into string
     var userString = userFoodPreference.toString();
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
-
+    foodNetworkUrl = [];
     foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
@@ -151,6 +155,7 @@ function showDrinks () {
 }
 cocktailbtn.addEventListener("click", showDrinks)
 /// save recipes to local storage
+//save recipes to local storage
 // function saveRecipe(){
 //     console.log(saveRecipe);
     
@@ -180,3 +185,47 @@ saveBtn.addEventListener("click", function (){
 
 // }
 // >>>>>>> 608301f444a9a225cfd0fe11244230d56f4375a8
+localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+
+// --------COCKTAIL API TESTING-------------
+var cocktailMenu = document.querySelector("#cocktails").value
+console.log(cocktailMenu)
+
+function fetchCocktailData(drink) {
+ 
+        var cocktailUrl = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${drink}`;
+        
+        
+        fetch(cocktailUrl)
+        .then((data) => data.json())
+        .then(function (cocktails) {    
+            cocktailArray.push(cocktails.drinks)
+            console.log(cocktailArray)
+
+            var randIndex = cocktailArray[Math.floor(Math.random() * cocktailArray.length)]
+
+            var randCocktail = randIndex[Math.floor(Math.random() * randIndex.length)]
+            console.log(randCocktail)
+            appendCocktail(randCocktail)
+        })
+}
+
+var $cocktailContainer = document.querySelector("#cocktail-append")
+
+// ---------APPEND COCKTAIL FUNCTION--------
+function appendCocktail(drink) {
+    // clear containers upon each search
+    $cocktailContainer.innerHTML = "";
+   
+    // append the Cocktail name
+    var cocktailName = document.createElement("div");
+    cocktailName.textContent = drink.strDrink;
+    $cocktailContainer.append(cocktailName);
+
+    // append the Cocktail image
+    var cocktailImage = document.createElement("img");
+    cocktailImage.setAttribute("src", drink.strDrinkThumb);
+    $cocktailContainer.append(cocktailImage);
+
+
+}
