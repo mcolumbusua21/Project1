@@ -88,3 +88,7 @@ h6 {font-size: 18px; font-family:'Allrounder Monument W00 Book' , 'fallback-font
     background-repeat: no-repeat;
     box-shadow:inset 0 0 0 2000px rgba(23, 27, 34 0.3);
 }
+
+.level {
+    max-width: 900px;
+}

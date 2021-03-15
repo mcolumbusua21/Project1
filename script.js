@@ -129,22 +129,22 @@ function appendRecipe(recipe) {
     $recipeContainer.innerHTML = "";
    
     // append the Recipe name
-    var recipeName = document.createElement("div");
+    var recipeName = document.querySelector(".food-name");
     recipeName.textContent = recipe.strMeal;
-    $recipeContainer.append(recipeName);
+    //$recipeContainer.append(recipeName); //
 
     // append the recipe image
-    var recipeImage = document.createElement("img");
-    recipeImage.setAttribute("src", recipe.strMealThumb);
-    $recipeContainer.append(recipeImage);
+    var recipeImage = document.querySelector("#foodimage");
+    recipeImage.src = recipe.strMealThumb;
+    //$recipeContainer.append(recipeImage);
     
     // append food network URL
     // NEED TO CLEAR FOODNETWORK STRING ON EACH SEARCH
-    var recipeUrl = document.createElement("a");
-    recipeUrl.setAttribute("href", foodNetworkUrl)
+    var recipeUrl = document.querySelector("#foodlink");
+    recipeUrl.href = foodNetworkUrl;
     recipeUrl.setAttribute("target", "_blank")
     recipeUrl.innerText = "Click here for recipes!"
-    $recipeContainer.append(recipeUrl)
+    //$recipeContainer.append(recipeUrl)
 
 }
 //Welcome modal
@@ -249,14 +249,20 @@ function appendCocktail(drink) {
     $cocktailContainer.innerHTML = "";
    
     // append the Cocktail name
-    var cocktailName = document.createElement("div");
+    var cocktailName = document.querySelector(".drink-name");
     cocktailName.textContent = drink.strDrink;
-    $cocktailContainer.append(cocktailName);
+    //$cocktailContainer.append(cocktailName);
 
     // append the Cocktail image
-    var cocktailImage = document.createElement("img");
-    cocktailImage.setAttribute("src", drink.strDrinkThumb);
-    $cocktailContainer.append(cocktailImage);
+    var cocktailImage = document.querySelector("#drinkimage");
+    cocktailImage.src = drink.strDrinkThumb;
+    //$cocktailContainer.append(cocktailImage);
+
+    var liquorUrl = document.querySelector("#drinklink");
+    liquorUrl.href = cocktailArray;
+    liquorUrl.setAttribute("target", "_blank")
+    liquorUrl.innerText = "Click here for recipes!"
+    //$recipeContainer.append(recipeUrl)
 
 
 }

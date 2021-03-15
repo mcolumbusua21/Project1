@@ -57,10 +57,10 @@
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-normal save-button">
+            <a class="button is-info save-button">
               Save Food
             </a>
-            <a class="button is-normal save-button">
+            <a class="button is-info save-button">
               Save Drink
             </a>
           </div>
@@ -388,12 +388,58 @@
     </select>
   </div>
 
-  <div id="recipe-append">
-    <!--Recipe Content for food-->
-  </div>
+  <div class="columns is-multiline is-mobile">
+    <div class="column is-one-quarter">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" id="foodimage" alt="Placeholder image" class="fimages">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4 food-name">John Smith</p>
+              <p class="subtitle is-6">Ingredients</p>
+            </div>
+          </div>
 
-  <div id="cocktail-append">
-    <!--Cocktail Content-->
+          <div class="content" id="food-ingredients">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris. <a id="foodlink"href="#">Learn More</a>.
+          </div>
+        </div>
+      </div>
+      <div id="recipe-append">
+        <!--Food Recipe Content-->
+      </div>
+    </div>
+
+    <div class="column is-one-quarter">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <img src="https://bulma.io/images/placeholders/1280x960.png" id="drinkimage" alt="Placeholder image" class="fimages">
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4 drink-name">John Smith</p>
+              <p class="subtitle is-6">Ingredients</p>
+            </div>
+          </div>
+
+          <div class="content" id="food-ingredients">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Phasellus nec iaculis mauris. <a id="drinklink" href="#">Learn More</a>.
+          </div>
+        </div>
+      </div>
+      <div id="cocktail-append">
+        <!--Cocktail Content-->
+      </div>
+    </div>
   </div>
 
   <!-- END TEST -->
