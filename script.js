@@ -67,7 +67,7 @@ $btn.addEventListener("click", (event) => {
     var userString = userFoodPreference.toString();
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
-
+    foodNetworkUrl = [];
     foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
