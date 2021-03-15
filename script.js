@@ -77,6 +77,7 @@ $btn.addEventListener("click", (event) => {
     fetchFoodData();
 
     fetchCocktailData(cocktailMenu.value);
+    userLiquorPreference.push(cocktailMenu.value)
   console.log("COCKTAIL VALUE" + cocktailMenu.value)
 
     // change userFoodPreference into string
@@ -88,14 +89,25 @@ $btn.addEventListener("click", (event) => {
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
 
+<<<<<<< HEAD
     /* liquor */
    var userString2 = (userString2.replaceAll(",", "-"))
 var liquorUrl = `https://www.liquor.com/search?q=${userString2}-`
+=======
+
+    
+
+   var liquorString = cocktailMenu.value
+   console.log(liquorString)
+
+    var liquorUrl = liquorLink.push(`https://www.liquor.com/search?q=${liquorString}`)
+>>>>>>> c44fba535c7c1779dc21c864f25528b9eff8a5d4
     console.log(liquorUrl)
 });
 // *************************************************
 var foodNetworkUrl = [];
 
+liquorLink = []
 
 // -----------------FOOD RECIPE API----------------------
 
@@ -169,7 +181,7 @@ closeModal.addEventListener("click", function(){
 function showDrinks () {
     cocktailbtn.classList.toggle("is-active");
 }
-cocktailbtn.addEventListener("click", showDrinks)
+// cocktailbtn.addEventListener("click", showDrinks)
 
 /// save recipes to local storage
 //save recipes to local storage
@@ -178,6 +190,7 @@ cocktailbtn.addEventListener("click", showDrinks)
     
 // }
 /// Cocktail link
+<<<<<<< HEAD
 userLiquorPreference = []
 var userString = cocktailMenu.value;
 //userLiquorPreference.toString();
@@ -186,6 +199,16 @@ var userString = cocktailMenu.value;
 userString = (userString.replaceAll(",", "-"))
 var liquorUrl = `https://www.liquor.com/search?q=${userString}-`
     console.log(liquorUrl)
+=======
+var userLiquorPreference = []
+
+
+
+
+// userString = (userString.replaceAll(""))
+// var liquorUrl = `https://www.liquor.com/${userString}-`
+//     console.log(liquorUrl)
+>>>>>>> c44fba535c7c1779dc21c864f25528b9eff8a5d4
 
 saveBtn.addEventListener("click", function (){
     console.log("saveBtn");
@@ -225,10 +248,9 @@ function fetchCocktailData(drink) {
         fetch(cocktailUrl)
         .then((data) => data.json())
         .then(function (cocktails) {    
-            console.log(cocktails)
-            console.log(cocktails.drinks)
+            
             cocktailArray.push(cocktails.drinks)
-            console.log(cocktailArray)
+            
 
             var randIndex = cocktailArray[Math.floor(Math.random() * cocktailArray.length)]
 
@@ -256,6 +278,7 @@ function appendCocktail(drink) {
     cocktailImage.src = drink.strDrinkThumb;
     //$cocktailContainer.append(cocktailImage);
 
+<<<<<<< HEAD
     var lick1 = document.querySelector("#drinklink");
     lick1.href = liquorUrl;
     lick1.setAttribute("target", "_blank")
@@ -263,5 +286,12 @@ function appendCocktail(drink) {
     //$recipeContainer.append(recipeUrl)
     userString = "";
 
+=======
+    var drinkLink = document.querySelector("#drinklink");
+    drinkLink.href = liquorLink;
+    drinkLink.setAttribute("target", "_blank")
+    drinkLink.innerText = "Click here for recipes!"
+    liquorLink = []
+>>>>>>> c44fba535c7c1779dc21c864f25528b9eff8a5d4
 
 }
