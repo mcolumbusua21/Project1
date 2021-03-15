@@ -1,8 +1,8 @@
 const aboutUs = document.querySelector("#about-us")
 const recipes = document.querySelector("#recipes")
 const saveRecipe = document.querySelector("#saved-recipes")
-
-
+const $recipeContainer = document.querySelector("#recipe-append")
+const saveBtn = document.querySelector(".save-button")
 // aboutUs.addEventListener("click", function(e){
 //     console.log("click");
     
@@ -68,12 +68,12 @@ $btn.addEventListener("click", (event) => {
     // replace commas with hyphen
     userString = (userString.replaceAll(",", "-"))
 
-    var foodNetworkUrl = `https://www.foodnetwork.com/search/${userString}-`
+    foodNetworkUrl.push(`https://www.foodnetwork.com/search/${userString}-`)
     console.log(foodNetworkUrl)
     console.log(userFoodPreference)
 });
 // *************************************************
-
+var foodNetworkUrl = [];
 
 
 // -----------------FOOD RECIPE API----------------------
@@ -102,13 +102,39 @@ function fetchFoodData(){
             // get random recipe from random Index
             var randomRecipe = randomIndex[Math.floor(Math.random() * randomIndex.length)]
             console.log(randomRecipe)
+            appendRecipe(randomRecipe)
 
         })
     }
 
-    // return recipeArray
-}
 
+};
+
+// -------APPEND RECIPE FUNCTION ----------
+function appendRecipe(recipe) {
+    // clear containers upon each search
+    $recipeContainer.innerHTML = "";
+   
+    // append the Recipe name
+    var recipeName = document.createElement("div");
+    recipeName.textContent = recipe.strMeal;
+    $recipeContainer.append(recipeName);
+
+    // append the recipe image
+    var recipeImage = document.createElement("img");
+    recipeImage.setAttribute("src", recipe.strMealThumb);
+    $recipeContainer.append(recipeImage);
+    
+    // append food network URL
+    // NEED TO CLEAR FOODNETWORK STRING ON EACH SEARCH
+    var recipeUrl = document.createElement("a");
+    recipeUrl.setAttribute("href", foodNetworkUrl)
+    recipeUrl.setAttribute("target", "_blank")
+    recipeUrl.innerText = "Click here for recipes!"
+    $recipeContainer.append(recipeUrl)
+
+}
+//Welcome modal
 var closeModal = document.querySelector("#modal-close-btn")
 var modalContainer = document.querySelector(".modal")
 
@@ -117,6 +143,7 @@ closeModal.addEventListener("click", function(){
 })
 
 
+<<<<<<< HEAD
 function messageContainer (){
     console.log(messageContainer)
     var btnClick; 
@@ -131,15 +158,30 @@ function showDrinks () {
 }
 cocktailbtn.addEventListener("click", showDrinks)
 /// save recipes to local storage
+=======
+//save recipes to local storage
+>>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
 // function saveRecipe(){
 //     console.log(saveRecipe);
-//     var saveRecipe = document.querySelector(".save-button")
+    
 // }
 /// Cocktail link
 userLiquorPreference = []
 var userString = userLiquorPreference.toString();
+<<<<<<< HEAD
 userString = (userString.replaceAll(",", "-"))
 var liquorUrl = `https://www.liquor.com/spirits-and-liqueurs/${userString}-`
     console.log(liquorUrl)
 
 
+=======
+userString = (userString.replaceAll(""))
+var liquorUrl = `https://www.liquor.com/${userString}-`
+    console.log(liquorUrl)
+
+// saveBtn.addEventListener("click", function(event){
+//     saveRecipe.
+// })
+
+localStorage.setItem("saved-recipes", JSON.stringify(saveRecipe));
+>>>>>>> 794fb3a943614b74ecceb3f930dee2dfa53e7aee
