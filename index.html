@@ -1,281 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" />
-  <link rel="stylesheet" href="/style.css" />
-  <title>Meals & Tails</title>
-</head>
-
-<body>
-  <!--Top navigation bar-->
-  <nav class="topnav" id="myTopnav">
-    <ul>
-      <li class="name" class="active"><a href="index.html">Meals & Tails</a></li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="aboutme.html" class="navbar-item" class="about-us">About Us</a></li>
-      <li><a class="navbar-item" class="recipes">Saved Recipes</a></li>
-      <li><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a></li>
-    </ul>
-  </nav>
-  <!--Ends here-->
-
-  <div class="container row first">
-    <div class="modal is-active">
-      <div class="modal-background"></div>
-      <div class="modal-content ">
-        <div class="card">
-          <div class="card-content">
-            <div class="content">
-              Welcome to Meals & Tails, where you can search for recipes of your favorite foods. Please choose up to 4
-              ingredients to make a delicious meal. When you are finished you can pick a spirit to pair with your meal!!
-            </div>
-          </div>
-        </div>
-      </div> -->
-      <button class="modal-close is-large is-active" id="modal-close-btn" aria-label="close"></button>
-    </div>
-
-    <!-- ------------------------PROTEIN------------------- -->
-
-    <div class="card column" id="proteins-card">
-      <div class="card-content" id="proteins-card-content">
-        <div class="content">PROTEINS</div>
-      </div>
-      <!-- BEEF -->
-      <label class="checkbox">
-        <input type="checkbox" class="checkbox" name="proteinsCheck" data-food="beef" value="beef">
-        Beef
-      </label>
-      <!-- Chicken -->
-      <label class="checkbox">
-        <input type="checkbox" class="checkbox" name="proteinsCheck" value="chicken">
-        Chicken
-      </label>
-      <!-- Pork -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="pork">
-        Pork
-      </label>
-      <!-- Fish -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="salmon">
-        Fish
-      </label>
-      <!-- Tofu -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="tofu">
-        Tofu
-      </label>
-      <!-- Eggs -->
-      <label class="checkbox">
-        <input type="checkbox" name="proteinsCheck" value="eggs">
-        Eggs
-      </label>
-
-    </div>
-    <!-- -----------------VEGETABLES-------------------- -->
-    <div class="card column" id="vegetables-card">
-      <div class="card-content">
-        <div class="content">
-          VEGETABLES
-        </div>
-        <!-- Onions -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="onion">
-          Onions
-        </label>
-        <!-- Peppers -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="pepper">
-          Peppers
-        </label>
-        <!-- Potatoes -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="potatoes">
-          Potatoes
-        </label>
-        <!-- Garlic -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="garlic">
-          Garlic
-        </label>
-        <!-- Tomato -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="tomatoes">
-          Tomatoes
-        </label>
-        <!-- Lettuce -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="cabbage">
-          Lettuce
-        </label>
-        <!-- Broccoli -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="broccoli">
-          Broccoli
-        </label>
-        <!-- Spinach -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="spinach">
-          Spinach
-        </label>
-        <!-- Asparagus -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="asparagus">
-          Asparagus
-        </label>
-        <!-- Squash -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="squash">
-          Squash
-        </label>
-        <!-- Zucchini -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="zucchini">
-          Zucchini
-        </label>
-        <!-- Cucumber -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="cucumber">
-          Cucumber
-        </label>
-        <!-- Rosemary -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="rosemary">
-          Rosemary
-        </label>
-        <!-- Basil -->
-        <label class="checkbox">
-          <input type="checkbox" name="vegetablesCheck" value="basil">
-          Basil
-        </label>
-      </div>
-
-      <div class="card column" id="grains-card">
-        <div class="card-content">
-          <div class="content">
-            Grains/Gluten
-          </div>
-          <!-- Rice -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="rice">
-            Rice
-          </label>
-          <!-- Flour -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="flour">
-            Flour
-          </label>
-          <!-- Bread -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="bread">
-            Bread
-          </label>
-          <!-- Noodles -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="spaghetti">
-            Noodles
-          </label>
-          <!-- Quinoa -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="quinoa">
-            Quinoa
-          </label>
-          <!-- Ramen -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="ramen">
-            Ramen
-          </label>
-          <!-- Tortillas -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="tortilla">
-            Tortillas
-          </label>
-          <!-- Oats -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="oats">
-            Oats
-          </label>
-          <!-- Brown Rice -->
-          <label class="checkbox">
-            <input type="checkbox" name="grainsCheck" value="brown_rice">
-            Brown Rice
-          </label>
-        </div>
-      </div>
-      <!--Cokctails Div-->
-      <div class="notification column">
-        <h3>Cocktails</h3>
-        <div class="dropdown">
-          <div class="dropdown-trigger">
-            <button class="cbutton" aria-haspopup="true" aria-controls="dropdown-menu">
-              <span>Cocktails</span>
-              <span class="icon is-small">
-                <i class="fas fa-angle-down" aria-hidden="true"></i>
-              </span>
-            </button>
-          </div>
-          <div class="dropdown-menu" id="dropdown-menu" role="menu">
-            <div class="dropdown-content">
-              <a href="#" class="dropdown-item">
-                Whiskey
-              </a>
-              <a class="dropdown-item">
-                Rum
-              </a>
-              <a href="#" class="dropdown-item is-active">
-                Tequia
-              </a>
-              <a href="#" class="dropdown-item">
-                Vodka
-              </a>
-              <a href="#" class="dropdown-item">
-                Gin
-              </a>
-              <a href="#" class="dropdown-item">
-                Wine
-              </a>
-              <a href="#" class="dropdown-item">
-                Beer
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="search-button"> Search</button>
-    </div>
-  </div>
-  <button class="modal-close is-large" id="modal-close-btn" aria-label="close"></button>
-  </div>
-  <button class="save-button">Save Recipe</button>
-
-  <a href="recipe.html">
-  </a>
-  <!-- TESTING APPEND RECIPE -->
-
-  <button class="search-button"> Search</button>
-
-  <!-- TESTING  -->
-
-  <select id="cocktails" name="cocktails">
-    <option value="Whiskey">Whiskey</option>
-    <option value="Vodka">Vodka</option>
-    <option value="Rum">Rum</option>
-    <option value="Tequila">Tequila</option>
-    <option value="Gin">Gin</option>
-    <option value="Wine">Wine</option>
-    <option value="Non_Alcoholic">Non Alcoholic</option>
-  </select>
-
-  <div id="recipe-append"></div>
-
-  <div id="cocktail-append"></div>
-  <!-- END TEST -->
-  <script src="script.js"></script>
-</body>
-
+	<head>
+		<meta charset="UTF-8">
+		<meta content="IE=edge" http-equiv="X-UA-Compatible">
+		<meta content="width=device-width, initial-scale=1.0" name="viewport">
+		<link href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css" rel="stylesheet">
+		<link href="/style.css" rel="stylesheet">
+		<title>
+			Meals & Tails
+		</title>
+	</head>
+	<body>
+		<!--Top navigation bar-->
+		<nav aria-label="main navigation" class="navbar sticky" id="mainNav" role="navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="#"><!-- <img src="images/logo.png" width="75px" height="75"class="logo"> --></a> <a aria-expanded="false" aria-label="menu" class="navbar-burger" data-target="navbarBasicExample" role="button"><span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span></a>
+			</div>
+			<div class="navbar-menu" id="navbarBasicExample">
+				<div class="navbar-start center white">
+					<a class="navbar-item one">Home</a> <a class="navbar-item two">About Us</a>
+					<div class="navbar-item has-dropdown is-hoverable">
+						<a class="navbar-link">More</a>
+						<div class="navbar-dropdown">
+							<a class="navbar-item">Saved Food Receipes</a> <a class="navbar-item">Saved Drinks</a>
+							<hr class="navbar-divider">
+							<a class="navbar-item clearlist">Clear List</a>
+						</div>
+					</div>
+				</div>
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button is-info save-button">Save Food</a> <a class="button is-info save-button">Save Drink</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav><!--Ends here-->
+		<!--Hero Set Up-->
+		<section class="hero is-small is-info">
+			<div class="hero-body">
+				<div class="hero-bg"></div>
+			</div>
+		</section><!--header Banner-->
+		<section class="hero">
+			<div class="hero-body">
+				<div class="container">
+					<h1 class="intro">
+						Mix & Match is our business
+					</h1>
+				</div>
+			</div>
+		</section>
+		<nav class="level">
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">
+						Tweets
+					</p>
+					<p class="title">
+						3,456
+					</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">
+						Following
+					</p>
+					<p class="title">
+						123
+					</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">
+						Followers
+					</p>
+					<p class="title">
+						456K
+					</p>
+				</div>
+			</div>
+			<div class="level-item has-text-centered">
+				<div>
+					<p class="heading">
+						Likes
+					</p>
+					<p class="title">
+						789
+					</p>
+				</div>
+			</div>
+		</nav><!--Containers of Check List-->
+		<section class="section has-background-white">
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+						<article class="media notification is-info bg1 opacity">
+							<div class="media-content">
+								<div class="content">
+									<!-- ========================PROTEIN=================== -->
+									<h3 class="title is-size-4">
+										Protein
+									</h3><!-- BEEF -->
+									 <label class="checkbox"><input class="checkbox" data-food="beef" name="proteinsCheck" type="checkbox" value="beef"> Beef</label> <!-- Chicken -->
+									 <label class="checkbox"><input class="checkbox" name="proteinsCheck" type="checkbox" value="chicken"> Chicken</label> <!-- Pork -->
+									 <label class="checkbox"><input name="proteinsCheck" type="checkbox" value="pork"> Pork</label> <!-- Fish -->
+									 <label class="checkbox"><input name="proteinsCheck" type="checkbox" value="salmon"> Fish</label> <!-- Tofu -->
+									 <label class="checkbox"><input name="proteinsCheck" type="checkbox" value="tofu"> Tofu</label> <!-- Eggs -->
+									 <label class="checkbox"><input name="proteinsCheck" type="checkbox" value="eggs"> Eggs</label>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="column">
+						<article class="media notification is-info bg2 opacity">
+							<div class="media-content">
+								<div class="content">
+									<!-- =================VEGETABLES==================== -->
+									<h3 class="title is-size-4">
+										Vegatables
+									</h3><!-- Onions -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="onion"> Onions</label> <!-- Peppers -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="pepper"> Peppers</label> <!-- Potatoes -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="potatoes"> Potatoes</label> <!-- Garlic -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="garlic"> Garlic</label> <!-- Tomato -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="tomatoes"> Tomatoes</label> <!-- Lettuce -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="cabbage"> Lettuce</label> <!-- Broccoli -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="broccoli"> Broccoli</label> <!-- Spinach -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="spinach"> Spinach</label> <!-- Asparagus -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="asparagus"> Asparagus</label> <!-- Squash -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="squash"> Squash</label> <!-- Zucchini -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="zucchini"> Zucchini</label> <!-- Cucumber -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="cucumber"> Cucumber</label> <!-- Rosemary -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="rosemary"> Rosemary</label> <!-- Basil -->
+									 <label class="checkbox"><input name="vegetablesCheck" type="checkbox" value="basil"> Basil</label>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="column">
+						<article class="media notification is-info bg3 opacity">
+							<div class="media-content">
+								<div class="content">
+									<!-- ========================Grains/Gluten=================== -->
+									<h3 class="title is-size-4">
+										Grains/Gluten
+									</h3><!-- Rice -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="rice"> Rice</label> <!-- Flour -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="flour"> Flour</label> <!-- Bread -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="bread"> Bread</label> <!-- Noodles -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="spaghetti"> Noodles</label> <!-- Quinoa -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="quinoa"> Quinoa</label> <!-- Ramen -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="ramen"> Ramen</label> <!-- Tortillas -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="tortilla"> Tortillas</label> <!-- Oats -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="oats"> Oats</label> <!-- Brown Rice -->
+									 <label class="checkbox"><input name="grainsCheck" type="checkbox" value="brown_rice"> Brown Rice</label>
+								</div>
+							</div>
+						</article>
+					</div><!--End of Columns Section-->
+				</div>
+			</div>
+		</section>
+		<div class="container row first">
+			<div class="modal is-active mod2">
+				<div class="modal-background"></div>
+				<div class="modal-content">
+					<div class="card">
+						<div class="card-content">
+							<div class="content">
+								Welcome to Meals & Tails, where you can search for recipes of your favorite foods. Please choose up to 4 ingredients to make a delicious meal. When you are finished you can pick a spirit to pair with your meal!!
+							</div>
+						</div>
+					</div>
+				</div><button aria-label="close" class="modal-close bt1 is-large is-active" id="modal-close-btn1"></button>
+			</div><!--Cokctails Div-->
+			<div class="notification column is-5">
+				<h3>
+					Cocktails
+				</h3>
+				<div class="dropdown">
+					<div class="dropdown-trigger">
+						<button aria-controls="dropdown-menu" aria-haspopup="true" class="button is-dark"><span>Cocktails</span> <span class="icon is-small"><i aria-hidden="true" class="fas fa-angle-down"></i></span></button>
+					</div>
+					<div class="dropdown-menu" id="dropdown-menu" role="menu">
+						<div class="dropdown-content">
+							<a class="dropdown-item" href="#">Whiskey</a> <a class="dropdown-item">Rum</a> <a class="dropdown-item is-active" href="#">Tequia</a> <a class="dropdown-item" href="#">Vodka</a> <a class="dropdown-item" href="#">Gin</a> <a class="dropdown-item" href="#">Wine</a> <a class="dropdown-item" href="#">Beer</a>
+						</div>
+					</div>
+				</div>
+			</div><button class="button is-normal search-button">Search</button>
+		</div><button aria-label="close" class="modal-close is-large" id="modal-close-btn"></button> <!-- <button class="button is-normal save-button">Save Recipe</button> -->
+		 <a href="recipe.html"></a> <!-- TESTING APPEND RECIPE -->
+		 <button class="button is-normal search-button">Search</button> <!-- TESTING  -->
+		<div class="select is-primary">
+			<select id="cocktails" name="cocktails">
+				<option class="dropdown-item" value="Whiskey">
+					Whiskey
+				</option>
+				<option class="dropdown-item" value="Vodka">
+					Vodka
+				</option>
+				<option class="dropdown-item" value="Rum">
+					Rum
+				</option>
+				<option class="dropdown-item" value="Tequila">
+					Tequila
+				</option>
+				<option class="dropdown-item" value="Gin">
+					Gin
+				</option>
+				<option class="dropdown-item" value="Wine">
+					Wine
+				</option>
+				<option class="dropdown-item" value="Non_Alcoholic">
+					Non Alcoholic
+				</option>
+			</select>
+		</div>
+		<div class="columns is-multiline is-mobile">
+			<div class="column is-one-quarter">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img alt="Placeholder image" class="fimages" id="foodimage" src="https://bulma.io/images/placeholders/1280x960.png">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content">
+								<p class="title is-4 food-name">
+								
+								</p>
+								<p class="subtitle is-6">
+									Ingredients
+								</p>
+							</div>
+						</div>
+						<div class="content" id="food-ingredients">
+							 <a href="#" id="foodlink"></a>.
+						</div>
+					</div>
+				</div>
+				<div id="recipe-append">
+					<!--Food Recipe Content-->
+				</div>
+			</div>
+			<div class="column is-one-quarter">
+				<div class="card">
+					<div class="card-image">
+						<figure class="image is-4by3">
+							<img alt="Placeholder image" class="fimages" id="drinkimage" src="https://bulma.io/images/placeholders/1280x960.png">
+						</figure>
+					</div>
+					<div class="card-content">
+						<div class="media">
+							<div class="media-content">
+								<p class="title is-4 drink-name">
+									
+								</p>
+								<p class="subtitle is-6">
+									Ingredients
+								</p>
+							</div>
+						</div>
+						<div class="content" id="food-ingredients">
+							 <a href="#" id="drinklink"></a>.
+						</div>
+					</div>
+				</div>
+				<div id="cocktail-append">
+					<!--Cocktail Content-->
+				</div>
+			</div>
+		</div><!-- END TEST -->
+		<div id="map"></div>
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<p>
+						<strong>Meals & Tails</strong> by <a href="aboutme.html">Team 3</a>. The source code is licensed <a href="#">Trilogy Education Services</a>. The website content is licensed <a href="#">CC BY NC SA 4.0</a>.
+					</p>
+				</div>
+			</div>
+		</footer>
+		<script src="script.js">
+		</script>
+	</body>
 </html>
